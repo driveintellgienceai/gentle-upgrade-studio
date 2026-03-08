@@ -119,7 +119,7 @@ export default function Header() {
 
       {/* Mobile menu - full screen overlay */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-14 bg-secondary z-40 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-14 bg-secondary z-[60] overflow-y-auto pb-20">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-1">
             {navLinks.map((link) =>
               link.children ? (
