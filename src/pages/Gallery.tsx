@@ -30,16 +30,16 @@ export default function Gallery() {
   return (
     <Layout>
       <PageBanner title="Gallery" subtitle="Real patients, real results" />
-      <section className="py-16 md:py-24">
+      <section className="py-10 sm:py-16 md:py-24">
         <div className="container mx-auto px-4">
-          {/* Filter tabs */}
-          <div className="flex flex-wrap gap-2 mb-10 justify-center">
+          {/* Filter tabs - horizontally scrollable on mobile */}
+          <div className="flex gap-2 mb-8 sm:mb-10 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap sm:justify-center scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
                 className={cn(
-                  "px-4 py-2 rounded-full text-sm font-body transition-colors",
+                  "px-4 py-2.5 rounded-full text-sm font-body transition-colors whitespace-nowrap shrink-0",
                   active === cat
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-primary/10"
@@ -51,7 +51,7 @@ export default function Gallery() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filtered.map((item, i) => (
               <motion.div
                 key={item.src}
@@ -68,13 +68,13 @@ export default function Gallery() {
                     loading="lazy"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground mt-2 text-center">{item.label}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-2 text-center">{item.label}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-      <div className="lg:hidden h-14" />
+      <div className="lg:hidden h-16" />
     </Layout>
   );
 }

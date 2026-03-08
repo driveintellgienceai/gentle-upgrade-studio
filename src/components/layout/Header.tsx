@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,15 +27,31 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+    setServicesOpen(false);
+  }, [location.pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   return (
     <header className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-sm border-b border-gold/20">
-      <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
+      <div className="container mx-auto px-4 flex items-center justify-between h-14 md:h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-2 shrink-0">
           <img
             src="https://www.tootharchitectdental.com/wp-content/uploads/2022/05/logo-new.svg"
             alt="Tooth Architect Dental Care"
-            className="h-10 md:h-14 w-auto"
+            className="h-8 sm:h-10 md:h-14 w-auto"
           />
         </Link>
 
@@ -93,7 +109,7 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-secondary-foreground"
+          className="lg:hidden text-secondary-foreground p-2 -mr-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -101,28 +117,30 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - full screen overlay */}
       {mobileOpen && (
-        <div className="lg:hidden bg-secondary border-t border-gold/20">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-1">
+        <div className="lg:hidden fixed inset-0 top-14 bg-secondary z-40 overflow-y-auto">
+          <nav className="container mx-auto px-4 py-6 flex flex-col gap-1">
             {navLinks.map((link) =>
               link.children ? (
                 <div key={link.label}>
                   <button
-                    className="w-full text-left px-3 py-3 text-sm text-secondary-foreground/80 flex items-center justify-between"
+                    className="w-full text-left px-3 py-4 text-base font-body text-secondary-foreground/80 flex items-center justify-between border-b border-gold/10"
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
                     {link.label}
-                    <ChevronDown className={cn("h-4 w-4 transition-transform", servicesOpen && "rotate-180")} />
+                    <ChevronDown className={cn("h-5 w-5 transition-transform", servicesOpen && "rotate-180")} />
                   </button>
                   {servicesOpen && (
-                    <div className="pl-4">
+                    <div className="pl-4 bg-navy-light/30">
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
                           to={child.href}
-                          className="block px-3 py-2.5 text-sm text-secondary-foreground/60 hover:text-primary"
-                          onClick={() => setMobileOpen(false)}
+                          className={cn(
+                            "block px-3 py-3.5 text-base font-body text-secondary-foreground/60 hover:text-primary border-b border-gold/5",
+                            location.pathname === child.href && "text-primary"
+                          )}
                         >
                           {child.label}
                         </Link>
@@ -134,20 +152,22 @@ export default function Header() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="px-3 py-3 text-sm text-secondary-foreground/80 hover:text-primary"
-                  onClick={() => setMobileOpen(false)}
+                  className={cn(
+                    "px-3 py-4 text-base font-body text-secondary-foreground/80 hover:text-primary border-b border-gold/10",
+                    location.pathname === link.href && "text-primary"
+                  )}
                 >
                   {link.label}
                 </Link>
               )
             )}
-            <div className="pt-4 border-t border-gold/10 flex flex-col gap-3">
-              <a href="tel:+14046668066" className="flex items-center gap-2 px-3 text-sm text-primary">
-                <Phone className="h-4 w-4" />
+            <div className="pt-6 flex flex-col gap-4">
+              <a href="tel:+14046668066" className="flex items-center gap-3 px-3 text-base text-primary font-body">
+                <Phone className="h-5 w-5" />
                 (404) 666-8066
               </a>
-              <Button asChild className="bg-primary text-primary-foreground hover:bg-gold-dark font-body font-bold">
-                <Link to="/request-an-appointment/" onClick={() => setMobileOpen(false)}>
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-gold-dark font-body font-bold w-full">
+                <Link to="/request-an-appointment/">
                   Request Appointment
                 </Link>
               </Button>
