@@ -7,18 +7,19 @@ export default function MeetTheDoctor() {
   return (
     <Layout>
       <PageBanner title="Meet the Doctor" />
-      <section className="py-16 md:py-24">
+      <section className="py-10 sm:py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-5 gap-12">
+          <div className="grid md:grid-cols-5 gap-8 md:gap-12">
             <div className="md:col-span-2">
               <img
                 src="https://www.tootharchitectdental.com/wp-content/uploads/2023/11/Dr.-ShivaTalebi-745x1024.jpg"
                 alt="Dr. Shiva Talebi"
-                className="rounded-lg shadow-xl w-full max-w-sm mx-auto sticky top-24"
+                className="rounded-lg shadow-xl w-full max-w-[280px] sm:max-w-sm mx-auto md:sticky md:top-24"
+                loading="lazy"
               />
             </div>
-            <div className="md:col-span-3 space-y-6 text-muted-foreground leading-relaxed">
-              <h2 className="text-2xl md:text-3xl font-heading text-foreground">
+            <div className="md:col-span-3 space-y-4 sm:space-y-6 text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-heading text-foreground">
                 Dr. Shiva Talebi, DMD
               </h2>
               <p>
@@ -36,12 +37,12 @@ export default function MeetTheDoctor() {
               <p>
                 As an active member of the American Dental Association (ADA), the Holistic Dental Association (HDA), and other professional organizations, Dr. Talebi stays at the forefront of dental advances and best practices.
               </p>
-              <h3 className="text-xl font-heading text-foreground pt-4">Community Involvement</h3>
+              <h3 className="text-lg sm:text-xl font-heading text-foreground pt-2 sm:pt-4">Community Involvement</h3>
               <p>
                 Beyond her practice, Dr. Talebi is passionate about giving back to the community. She volunteers at the Ben Massell Dental Clinic providing dental care to those in need. Her commitment to community service reflects her belief that everyone deserves access to quality dental care.
               </p>
-              <div className="pt-6">
-                <Button asChild className="bg-primary text-primary-foreground hover:bg-gold-dark font-body font-bold">
+              <div className="pt-4 sm:pt-6">
+                <Button asChild className="bg-primary text-primary-foreground hover:bg-gold-dark font-body font-bold w-full sm:w-auto">
                   <Link to="/request-an-appointment/">Schedule a Visit</Link>
                 </Button>
               </div>
@@ -49,7 +50,7 @@ export default function MeetTheDoctor() {
           </div>
         </div>
       </section>
-      <div className="lg:hidden h-14" />
+      <div className="lg:hidden h-16" />
     </Layout>
   );
 }

@@ -19,9 +19,9 @@ export default function Testimonials() {
   return (
     <Layout>
       <PageBanner title="Testimonials" subtitle="Hear from our patients" />
-      <section className="py-16 md:py-24">
+      <section className="py-10 sm:py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {reviews.map((review, i) => (
               <motion.div
                 key={i}
@@ -31,14 +31,14 @@ export default function Testimonials() {
                 transition={{ delay: i * 0.05 }}
               >
                 <Card className="h-full">
-                  <CardContent className="p-6">
-                    <div className="flex gap-0.5 mb-3">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex gap-0.5 mb-2 sm:mb-3">
                       {Array.from({ length: review.rating }).map((_, j) => (
                         <Star key={j} className="h-4 w-4 fill-primary text-primary" />
                       ))}
                     </div>
-                    <p className="text-muted-foreground leading-relaxed mb-4">"{review.text}"</p>
-                    <p className="font-heading font-semibold text-foreground">{review.name}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">"{review.text}"</p>
+                    <p className="font-heading font-semibold text-sm sm:text-base text-foreground">{review.name}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -46,7 +46,7 @@ export default function Testimonials() {
           </div>
         </div>
       </section>
-      <div className="lg:hidden h-14" />
+      <div className="lg:hidden h-16" />
     </Layout>
   );
 }

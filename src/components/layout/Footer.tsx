@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -30,16 +30,16 @@ const hours = [
 export default function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container mx-auto px-4 py-10 sm:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Brand */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <img
               src="https://www.tootharchitectdental.com/wp-content/uploads/2022/05/logo-new.svg"
               alt="Tooth Architect Dental Care"
-              className="h-14 w-auto mb-6"
+              className="h-10 sm:h-14 w-auto mb-4 sm:mb-6"
             />
-            <p className="text-sm text-secondary-foreground/60 leading-relaxed">
+            <p className="text-xs sm:text-sm text-secondary-foreground/60 leading-relaxed">
               Holistic and preventative dental care in Sandy Springs, Georgia,
               led by Dr. Shiva Talebi.
             </p>
@@ -47,11 +47,11 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-primary font-heading text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2.5">
+            <h3 className="text-primary font-heading text-base sm:text-lg mb-3 sm:mb-4">Quick Links</h3>
+            <ul className="space-y-2 sm:space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-sm text-secondary-foreground/60 hover:text-primary transition-colors">
+                  <Link to={link.href} className="text-xs sm:text-sm text-secondary-foreground/60 hover:text-primary transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -61,11 +61,11 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-primary font-heading text-lg mb-4">Services</h3>
-            <ul className="space-y-2.5">
+            <h3 className="text-primary font-heading text-base sm:text-lg mb-3 sm:mb-4">Services</h3>
+            <ul className="space-y-2 sm:space-y-2.5">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-sm text-secondary-foreground/60 hover:text-primary transition-colors">
+                  <Link to={link.href} className="text-xs sm:text-sm text-secondary-foreground/60 hover:text-primary transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -74,9 +74,9 @@ export default function Footer() {
           </div>
 
           {/* Contact & Hours */}
-          <div>
-            <h3 className="text-primary font-heading text-lg mb-4">Contact & Hours</h3>
-            <div className="space-y-4 text-sm text-secondary-foreground/60">
+          <div className="col-span-2 md:col-span-1">
+            <h3 className="text-primary font-heading text-base sm:text-lg mb-3 sm:mb-4">Contact & Hours</h3>
+            <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-secondary-foreground/60">
               <div className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <div>
@@ -103,7 +103,7 @@ export default function Footer() {
                       <span className="text-secondary-foreground/40">{h.day}:</span> {h.time}
                     </p>
                   ))}
-                  <p className="text-xs text-secondary-foreground/40 mt-1">(Friday by appointment only)</p>
+                  <p className="text-[10px] sm:text-xs text-secondary-foreground/40 mt-1">(Friday by appointment only)</p>
                 </div>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-gold/10">
-        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-secondary-foreground/40">
+        <div className="container mx-auto px-4 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] sm:text-xs text-secondary-foreground/40">
           <p>© {new Date().getFullYear()} Tooth Architect Dental Care. All rights reserved.</p>
           <div className="flex gap-4">
             <Link to="/privacy-policy/" className="hover:text-primary transition-colors">Privacy Policy</Link>
