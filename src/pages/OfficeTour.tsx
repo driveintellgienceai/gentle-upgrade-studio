@@ -4,18 +4,20 @@ import CTABanner from "@/components/CTABanner";
 import SEOHead from "@/components/SEOHead";
 
 const officePhotos = [
-  { src: "/images/office/Console and light lobby.jpeg", alt: "Lobby reception area with console and lighting" },
+  // Professional photoshoot — landscape, high quality
+  { src: "/images/photoshoot/_DSC_4486-HDR-2-Edit-3.jpg", alt: "Patient consultation area with sage green cabinetry", featured: true },
+  { src: "/images/photoshoot/_DSC_4570-HDR-Edit.jpg", alt: "Welcoming waiting area with pendant light" },
+  { src: "/images/photoshoot/_DSC_4382-HDR-2-Edit.jpg", alt: "Treatment room with Dr. Talebi's diploma" },
+  { src: "/images/photoshoot/_DSC_4591-HDR-Edit.jpg", alt: "Vanity detail with copper sink and mirror" },
+  { src: "/images/photoshoot/_DSC_4415-HDR.jpg", alt: "Mid-century sconce lighting" },
+  { src: "/images/photoshoot/DSC_4405-HDR-Edit.jpg", alt: "Treatment room overview" },
+  // Office photos
+  { src: "/images/office/Console and light lobby.jpeg", alt: "Lobby console and lighting" },
   { src: "/images/office/lobby blue painting.jpeg", alt: "Lobby with signature blue painting" },
-  { src: "/images/office/Lobby 2 books.jpeg", alt: "Welcoming lobby seating area" },
-  { src: "/images/office/loby 1 book.jpeg", alt: "Lobby detail" },
-  { src: "/images/office/console lobby.jpeg", alt: "Reception console" },
+  { src: "/images/office/Lobby 2 books.jpeg", alt: "Comfortable waiting area" },
+  { src: "/images/office/loby 1 book.jpeg", alt: "Lobby reading corner" },
   { src: "/images/office/DSC_2143.jpeg", alt: "Treatment room" },
-  { src: "/images/office/DSC_2147.jpeg", alt: "Treatment room view" },
-  { src: "/images/office/DSC_2961.jpeg", alt: "Office interior" },
-  { src: "/images/office/DSC_2004.jpeg", alt: "Office space" },
-  { src: "/images/office/DSC_2140.jpeg", alt: "Interior detail" },
-  { src: "/images/office/DSC_0056.JPG", alt: "Office overview" },
-  { src: "/images/office/DSC_0060 edited levels.jpeg", alt: "Office atmosphere" },
+  { src: "/images/office/DSC_2961.jpeg", alt: "Office detail" },
 ];
 
 export default function OfficeTour() {
@@ -31,15 +33,20 @@ export default function OfficeTour() {
       <section className="py-12 sm:py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-body">
+            <p className="text-base sm:text-lg text-[#7F7947] leading-relaxed font-body">
               Our Sandy Springs office was designed with the same care and intentionality we bring to every patient interaction. Mid-century modern design, warm earth tones, and natural light create a calm, comfortable environment from the moment you walk in.
             </p>
           </div>
 
-          {/* Photo grid — 3 cols desktop, 2 tablet, 1 mobile */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Photo grid — first image featured (2 cols wide) */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {officePhotos.map((photo, i) => (
-              <div key={i} className="overflow-hidden rounded-lg aspect-[4/3] bg-[#F1DDBC]/20">
+              <div
+                key={i}
+                className={`overflow-hidden rounded-xl bg-[#F1DDBC]/20 ${
+                  photo.featured ? "col-span-2 row-span-1 aspect-[16/9]" : "aspect-[4/3]"
+                }`}
+              >
                 <img
                   src={photo.src}
                   alt={photo.alt}
