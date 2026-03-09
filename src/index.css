@@ -46,92 +46,52 @@
 
 @layer base {
   :root {
-    /* Page background — Linen #F1DDBC lightened (warm parchment) */
-    --background: 38 62% 97%;
-    /* Primary text — near-black with olive undertone */
-    --foreground: 57 8% 16%;
+    /* Wonderist Brand Colors for Tooth Architect Dental Care */
+    --background: 48 33% 94%;          /* #F5F1E9 Ivory — page background */
+    --foreground: 80 30% 15%;          /* #2F351A Primary Dark — text */
 
-    /* Cards — warm white */
-    --card: 38 50% 98%;
-    --card-foreground: 57 8% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 80 30% 15%;
 
-    --popover: 38 50% 98%;
-    --popover-foreground: 57 8% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 80 30% 15%;
 
-    /* Primary — Olive #5F5B35 (hsl ~57,28%,29%) */
-    --primary: 57 28% 29%;
-    --primary-foreground: 38 62% 94%;
+    --primary: 80 30% 15%;             /* #2F351A Primary Dark — buttons, headers */
+    --primary-foreground: 48 33% 94%;  /* #F5F1E9 Ivory — text on primary */
 
-    /* Secondary — Eucalyptus #B1C6B7 (hsl ~134,16%,73%) */
-    --secondary: 134 16% 73%;
-    --secondary-foreground: 57 8% 16%;
+    --secondary: 48 33% 94%;           /* #F5F1E9 Ivory — section backgrounds */
+    --secondary-foreground: 80 30% 15%;
 
-    /* Muted — Linen #F1DDBC (hsl ~38,62%,84%) */
-    --muted: 38 62% 84%;
-    --muted-foreground: 57 6% 42%;
+    --muted: 37 16% 81%;               /* #D9D3C4 Sand — muted backgrounds */
+    --muted-foreground: 80 20% 35%;
 
-    /* Accent — Rust #D47D45 (hsl ~24,60%,55%) */
-    --accent: 24 60% 55%;
-    --accent-foreground: 38 62% 97%;
+    --accent: 30 42% 60%;              /* #C89A6A Terracotta — accent, highlights */
+    --accent-foreground: 80 30% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Borders — warm Linen-toned neutral */
-    --border: 38 25% 82%;
-    --input: 38 25% 82%;
-    --ring: 57 28% 29%;
+    --border: 37 16% 81%;              /* #D9D3C4 Sand */
+    --input: 37 16% 81%;
+    --ring: 30 42% 60%;                /* #C89A6A Terracotta */
 
     --radius: 0.5rem;
 
-    /* Sidebar — Olive primary */
-    --sidebar-background: 57 28% 29%;
-    --sidebar-foreground: 38 62% 94%;
-    --sidebar-primary: 24 60% 55%;
-    --sidebar-primary-foreground: 38 62% 97%;
-    --sidebar-accent: 134 16% 73%;
-    --sidebar-accent-foreground: 57 8% 16%;
-    --sidebar-border: 57 20% 24%;
-    --sidebar-ring: 24 60% 55%;
-  }
+    /* Named brand colors */
+    --olive-dark: 80 30% 15%;          /* #2F351A */
+    --olive: 73 44% 22%;               /* #4C5220 */
+    --ivory: 48 33% 94%;               /* #F5F1E9 */
+    --sand: 37 16% 81%;                /* #D9D3C4 */
+    --terracotta: 30 42% 60%;          /* #C89A6A */
 
-  .dark {
-    --background: 57 15% 10%;
-    --foreground: 38 40% 88%;
-
-    --card: 57 15% 14%;
-    --card-foreground: 38 40% 88%;
-
-    --popover: 57 15% 14%;
-    --popover-foreground: 38 40% 88%;
-
-    --primary: 57 28% 40%;
-    --primary-foreground: 57 15% 10%;
-
-    --secondary: 134 16% 55%;
-    --secondary-foreground: 38 40% 88%;
-
-    --muted: 57 12% 18%;
-    --muted-foreground: 38 15% 65%;
-
-    --accent: 24 60% 58%;
-    --accent-foreground: 57 15% 10%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 57 12% 22%;
-    --input: 57 12% 22%;
-    --ring: 57 28% 40%;
-
-    --sidebar-background: 57 15% 8%;
-    --sidebar-foreground: 38 40% 88%;
-    --sidebar-primary: 24 60% 58%;
-    --sidebar-primary-foreground: 57 15% 8%;
-    --sidebar-accent: 57 12% 18%;
-    --sidebar-accent-foreground: 38 40% 88%;
-    --sidebar-border: 57 12% 18%;
-    --sidebar-ring: 24 60% 58%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 80 30% 15%;
+    --sidebar-primary: 80 30% 15%;
+    --sidebar-primary-foreground: 48 33% 94%;
+    --sidebar-accent: 37 16% 81%;
+    --sidebar-accent-foreground: 80 30% 15%;
+    --sidebar-border: 37 16% 81%;
+    --sidebar-ring: 30 42% 60%;
   }
 }
 
