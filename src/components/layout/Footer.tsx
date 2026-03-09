@@ -28,6 +28,7 @@ const servicesCol1 = [
 ];
 
 const servicesCol2 = [
+  { label: "Clear Aligners", href: "/clear-aligners-reveal-suresmile/" },
   { label: "Digital X-Rays", href: "/digital-x-rays/" },
   { label: "Oral Cancer Screening", href: "/oral-cancer-screening/" },
   { label: "Gum Disease Treatment", href: "/gum-disease-periodontal-treatment/" },
