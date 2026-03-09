@@ -1,0 +1,25 @@
+/* Wonderist Brand Fonts — Tooth Architect Dental Care
+ * Add these declarations to src/index.css (before Tailwind directives)
+ * Font files must be placed in public/fonts/
+ *
+ * Update format() and file extensions if files are .ttf instead of .otf:
+ *   .otf  → format('opentype')
+ *   .ttf  → format('truetype')
+ *   .woff2 → format('woff2')  ← preferred for web performance
+ */
+
+@font-face {
+  font-family: 'Mostra Nuova';
+  src: url('/fonts/MostraNuova-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('/fonts/MuseoSans-500.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

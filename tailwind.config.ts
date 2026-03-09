@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -14,10 +19,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', 'serif'],
-        body: ['Lato', 'sans-serif'],
+        // Wonderist brand fonts with fallbacks
+        heading: ['"Mostra Nuova"', '"Cormorant Garamond"', 'serif'],
+        body:    ['"Museo Sans"', '"Nunito Sans"', 'sans-serif'],
       },
       colors: {
+        // shadcn/ui semantic tokens (mapped to brand)
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -51,16 +58,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        // Direct Wonderist brand color utilities — use as bg-brand-olive, text-brand-rust, etc.
+        brand: {
+          olive:     '#5B6142',
+          forest:    '#3E4A3C',
+          sage:      '#8FA89B',
+          parchment: '#EDE4D3',
+          linen:     '#F5EDE0',
+          rust:      '#C1602D',
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          light: "hsl(var(--navy-light))",
-        },
-        charcoal: "hsl(var(--charcoal))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
