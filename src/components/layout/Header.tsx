@@ -94,12 +94,16 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
         {/* Top bar with phones */}
-        <div className="hidden lg:block border-b border-border bg-primary">
+        <div className="hidden lg:block border-b border-gray-200 bg-white">
           <div className="container mx-auto px-4 flex items-center justify-between py-2">
             <Link to="/" className="shrink-0">
-              <img src={siteConfig.images.logo} alt={siteConfig.name} className="h-10 w-auto" />
+              <img 
+                src="https://www.tootharchitectdental.com/wp-content/uploads/2022/05/logo-new.svg" 
+                alt="Tooth Architect Dental Care" 
+                className="h-14 w-auto" 
+              />
             </Link>
             <div className="flex items-center gap-6">
               <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="flex items-center gap-2 text-sm text-primary-foreground font-body">
