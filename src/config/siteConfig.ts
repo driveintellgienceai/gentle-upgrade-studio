@@ -1,0 +1,57 @@
+export const siteConfig = {
+  name: "Tooth Architect Dental Care",
+  doctor: "Dr. Shiva Talebi, D.M.D.",
+  doctorShort: "Dr. Talebi",
+  tagline: "Conservative dentistry with a preventative approach and minimalist treatment planning",
+  phone: {
+    newPatients: "(404) 666-8066",
+    newPatientsTel: "+14046668066",
+    existingPatients: "(404) 255-7047",
+    existingPatientsTel: "+14042557047",
+  },
+  address: {
+    street: "6667 Vernon Woods Dr NE",
+    suite: "Ste B 30",
+    city: "Sandy Springs",
+    state: "GA",
+    zip: "30328",
+    full: "6667 Vernon Woods Dr NE, Ste B 30, Sandy Springs, GA 30328",
+    googleMapsUrl: "https://maps.google.com/?q=6667+Vernon+Woods+Dr+NE+Ste+B+30+Sandy+Springs+GA+30328",
+  },
+  hours: {
+    weekdays: "Mon – Thu: 8:00 AM – 4:00 PM",
+    friday: "Fri: 9:00 AM – 2:00 PM (by appointment only)",
+    schedule: [
+      { days: "Monday – Thursday", hours: "8:00 AM – 4:00 PM" },
+      { days: "Friday", hours: "9:00 AM – 2:00 PM" },
+      { days: "Saturday – Sunday", hours: "Closed" },
+    ],
+  },
+  google: {
+    rating: 4.9,
+    reviewCount: 195,
+    profileUrl: "https://www.google.com/maps/place/Tooth+Architect+Dental+Care/",
+  },
+  social: {
+    instagram: "https://www.instagram.com/tootharchitectdental/",
+  },
+  images: {
+    logo: "https://www.tootharchitectdental.com/wp-content/uploads/2022/05/logo-new.svg",
+    heroSlide1: "https://www.tootharchitectdental.com/wp-content/uploads/2022/05/slider-1-Tooth-Architect-Dental-Care-lobby-1.jpg",
+    heroSlide2: "https://www.tootharchitectdental.com/wp-content/uploads/2022/05/slider-2-Dr.-Shiva-Talebi.jpg",
+    heroSlide3: "https://www.tootharchitectdental.com/wp-content/uploads/2022/05/banner4.jpg",
+    drTalebiPortrait: "https://www.tootharchitectdental.com/wp-content/uploads/2023/11/Dr.-ShivaTalebi-745x1024.jpg",
+  },
+  insurance: ["Cigna PPO", "Guardian PPO", "Humana PPO", "Delta Dental PPO"],
+  affiliations: [
+    "American Dental Association (ADA)",
+    "Georgia Dental Association",
+    "American Institute of Architects (AIA)",
+    "Academy of General Dentistry (AGD)",
+    "American Academy of Clear Aligners",
+    "American Academy of Facial Esthetics (AAFE)",
+    "Jewish Family & Career Services (JFCS)",
+    "Ben Massell Dental Clinic (Volunteer)",
+    "AmeriCorps",
+  ],
+} as const;
