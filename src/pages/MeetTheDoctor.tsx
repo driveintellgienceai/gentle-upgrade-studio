@@ -16,18 +16,22 @@ export default function MeetTheDoctor() {
       />
       <PageBanner title="DR. SHIVA TALEBI, D.M.D." subtitle="General Dentist" />
 
-      <section className="py-12 sm:py-16 md:py-24">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-5 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-5 gap-10 md:gap-14">
 
-            {/* Portrait — sticky on desktop */}
+            {/* Portrait — aspect-[3/4] keeps the frame elegant; sticky on scroll */}
             <div className="md:col-span-2">
-              <img
-                src={siteConfig.images.drTalebiPortrait}
-                alt={siteConfig.doctor}
-                className="rounded-xl shadow-xl w-full max-w-sm mx-auto md:sticky md:top-24"
-                loading="lazy"
-              />
+              <div className="relative md:sticky md:top-28">
+                <img
+                  src={siteConfig.images.drTalebiPortrait}
+                  alt={siteConfig.doctor}
+                  className="rounded-2xl shadow-2xl w-full max-w-md mx-auto object-cover aspect-[3/4]"
+                  style={{ objectPosition: "center 20%" }}
+                  loading="lazy"
+                />
+                <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-[#B1C6B7]/25 rounded-2xl -z-10 hidden md:block" />
+              </div>
             </div>
 
             {/* Bio + credentials */}

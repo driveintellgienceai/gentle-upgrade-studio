@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import PageBanner from "@/components/layout/PageBanner";
 import CTABanner from "@/components/CTABanner";
@@ -40,26 +41,37 @@ export default function MeetOurStaff() {
       />
       <PageBanner title="Meet Our Staff" />
 
-      <section className="py-12 sm:py-16 md:py-24">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
         <div className="container mx-auto px-4">
-          <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto mb-12 sm:mb-16">
+          <p className="text-center text-[#7F7947] font-body max-w-2xl mx-auto mb-16 text-base leading-relaxed">
             Our team is what makes every visit to Tooth Architect special. Each member brings expertise, warmth, and genuine care to every patient interaction.
           </p>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {staff.map((member) => (
-              <div key={member.name} className="text-center">
-                <div className="relative mb-4 mx-auto w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-[#B1C6B7]/30">
+            {staff.map((member, i) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="text-center"
+              >
+                {/* Portrait card — aspect-[3/4] keeps faces visible and gives an editorial feel */}
+                <div className="relative mb-5 overflow-hidden rounded-2xl shadow-md">
                   <img
                     src={member.photo}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full aspect-[3/4] object-cover object-top hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
+                  {/* Subtle olive gradient at bottom for name readability */}
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#5F5B35]/30 to-transparent" />
                 </div>
-                <h3 className="font-heading text-lg text-[#5F5B35] mb-0.5">{member.name}</h3>
+                <h3 className="font-heading text-lg text-[#5F5B35] tracking-wide mb-0.5">{member.name}</h3>
                 <p className="text-sm text-[#D47D45] font-body font-medium mb-3">{member.role}</p>
-                <p className="text-sm text-muted-foreground font-body leading-relaxed">{member.bio}</p>
-              </div>
+                <p className="text-sm text-[#7F7947] font-body leading-relaxed">{member.bio}</p>
+              </motion.div>
             ))}
           </div>
         </div>

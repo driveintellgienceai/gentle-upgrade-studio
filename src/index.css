@@ -9,8 +9,7 @@
 @font-face {
   font-family: 'Mostra Nuova';
   src: url('/fonts/MostraNuova-Light.otf') format('opentype'),
-       url('/fonts/MostraNuova-Light.ttf') format('truetype'),
-       url('/fonts/MostraNuova-Light.woff2') format('woff2');
+       url('/fonts/MostraNuova-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;

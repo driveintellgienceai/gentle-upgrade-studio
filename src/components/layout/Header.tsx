@@ -95,9 +95,9 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <header className="sticky top-0 z-50 bg-white border-b border-[#B1C6B7]/20">
         {/* Top bar with phones */}
-        <div className="hidden lg:block border-b border-gray-200 bg-white">
+        <div className="hidden lg:block border-b border-[#B1C6B7]/15 bg-white">
           <div className="container mx-auto px-4 flex items-center justify-between py-2">
             <Link to="/" className="shrink-0">
               <img 
@@ -140,7 +140,7 @@ export default function Header() {
                 About Us <ChevronDown className="h-3.5 w-3.5" />
               </button>
               <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-white border border-gray-200 rounded-md shadow-xl py-2 min-w-[200px]">
+                <div className="bg-white border border-[#B1C6B7]/25 rounded-lg shadow-lg py-2 min-w-[200px]">
                   {aboutDropdown.map((item) => (
                     <Link key={item.href} to={item.href} className="block px-4 py-2.5 text-sm text-[#5F5B35] hover:text-[#D47D45] hover:bg-[#F1DDBC]/20 transition-colors">
                       {item.label}
@@ -156,7 +156,7 @@ export default function Header() {
                 Services <ChevronDown className="h-3.5 w-3.5" />
               </button>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-white border border-gray-200 rounded-xl shadow-xl p-6 min-w-[700px] grid grid-cols-3 gap-6">
+                <div className="bg-white border border-[#B1C6B7]/25 rounded-xl shadow-lg p-6 min-w-[700px] grid grid-cols-3 gap-6">
                   {servicesMega.map((group) => (
                     <div key={group.category}>
                       <h4 className="text-xs font-body font-semibold text-[#D47D45] uppercase tracking-wider mb-2">{group.category}</h4>
@@ -177,7 +177,7 @@ export default function Header() {
                 Patient Resources <ChevronDown className="h-3.5 w-3.5" />
               </button>
               <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-white border border-gray-200 rounded-md shadow-xl py-2 min-w-[200px]">
+                <div className="bg-white border border-[#B1C6B7]/25 rounded-lg shadow-lg py-2 min-w-[200px]">
                   {resourcesDropdown.map((item) => (
                     <Link key={item.href} to={item.href} className="block px-4 py-2.5 text-sm text-[#5F5B35] hover:text-[#D47D45] hover:bg-[#F1DDBC]/20 transition-colors">
                       {item.label}
@@ -215,49 +215,49 @@ export default function Header() {
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 top-14 z-[60] overflow-y-auto pb-24 bg-white">
           <nav className="px-6 py-4 flex flex-col">
-            <Link to="/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-gray-200">Home</Link>
+            <Link to="/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-[#B1C6B7]/20">Home</Link>
 
             {/* About Us */}
-            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-gray-200" onClick={() => toggleSection("about")}>
+            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-[#B1C6B7]/20" onClick={() => toggleSection("about")}>
               About Us <ChevronDown className={cn("h-5 w-5 transition-transform", openSection === "about" && "rotate-180")} />
             </button>
             {openSection === "about" && (
               <div className="pl-4 bg-[#F1DDBC]/10">
                 {aboutDropdown.map((item) => (
-                  <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-gray-100">{item.label}</Link>
+                  <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-[#B1C6B7]/15">{item.label}</Link>
                 ))}
               </div>
             )}
 
             {/* Services */}
-            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-gray-200" onClick={() => toggleSection("services")}>
+            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-[#B1C6B7]/20" onClick={() => toggleSection("services")}>
               Services <ChevronDown className={cn("h-5 w-5 transition-transform", openSection === "services" && "rotate-180")} />
             </button>
             {openSection === "services" && (
               <div className="pl-4 bg-[#F1DDBC]/10">
                 {servicesMega.map((group) =>
                   group.items.map((item) => (
-                    <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-gray-100">{item.label}</Link>
+                    <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-[#B1C6B7]/15">{item.label}</Link>
                   ))
                 )}
               </div>
             )}
 
             {/* Patient Resources */}
-            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-gray-200" onClick={() => toggleSection("resources")}>
+            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-[#B1C6B7]/20" onClick={() => toggleSection("resources")}>
               Patient Resources <ChevronDown className={cn("h-5 w-5 transition-transform", openSection === "resources" && "rotate-180")} />
             </button>
             {openSection === "resources" && (
               <div className="pl-4 bg-[#F1DDBC]/10">
                 {resourcesDropdown.map((item) => (
-                  <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-gray-100">{item.label}</Link>
+                  <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-[#B1C6B7]/15">{item.label}</Link>
                 ))}
               </div>
             )}
 
-            <Link to="/gallery/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-gray-200">Gallery</Link>
-            <Link to="/testimonials/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-gray-200">Testimonials</Link>
-            <Link to="/contact-us/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-gray-200">Contact</Link>
+            <Link to="/gallery/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-[#B1C6B7]/20">Gallery</Link>
+            <Link to="/testimonials/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-[#B1C6B7]/20">Testimonials</Link>
+            <Link to="/contact-us/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-[#B1C6B7]/20">Contact</Link>
 
             <div className="pt-6 flex flex-col gap-3">
               <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="flex items-center gap-3 text-base text-[#D47D45] font-body">
