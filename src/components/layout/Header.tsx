@@ -100,7 +100,7 @@ export default function Header() {
           <div className="container mx-auto px-4 flex items-center justify-between py-2">
             <Link to="/" className="shrink-0">
               <img 
-                src="/logos/tadc-primary-full-color-rgb.svg" 
+                src="https://www.tootharchitectdental.com/wp-content/uploads/2022/05/logo-new.svg" 
                 alt="Tooth Architect Dental Care" 
                 className="h-14 w-auto" 
               />
