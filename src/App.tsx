@@ -3,6 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// @ts-ignore — suppress React Router v7 future flag warnings in console
+const routerFuture = { v7_startTransition: true, v7_relativeSplatPath: true } as const;
 import Index from "./pages/Index";
 import MeetTheDoctor from "./pages/MeetTheDoctor";
 import MeetOurStaff from "./pages/MeetOurStaff";
@@ -45,7 +47,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter future={routerFuture}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/meet-the-doctor/" element={<MeetTheDoctor />} />

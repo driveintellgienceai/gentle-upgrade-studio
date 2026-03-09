@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   address: {
     street: "6667 Vernon Woods Dr NE",
-    suite: "Ste B 30",
+    suite: "Suite B-30",
     city: "Sandy Springs",
     state: "GA",
     zip: "30328",
@@ -39,10 +39,12 @@ export const siteConfig = {
     logo: "/logos/tadc-primary-full-color-rgb.svg",
     logoWhite: "/logos/tadc-primary-white-rgb.svg",
     logoIcon: "/logos/tadc-icon-full-color-rgb.svg",
-    heroSlide1: "/images/photoshoot/_DSC_4486-HDR-2-Edit-3.jpg",
-    heroSlide2: "/images/photoshoot/_DSC_4570-HDR-Edit.jpg",
-    heroSlide3: "/images/photoshoot/_DSC_4382-HDR-2-Edit.jpg",
-    drTalebiPortrait: "/images/photoshoot/DSC_4613-Enhanced-NR.jpg",
+    // Hero: dental chair first (most visually impressive), then Dr. Talebi, then the beautiful lobby
+    heroSlide1: "/images/photoshoot/_DSC_4382-HDR-2-Edit.jpg",   // 1. Treatment room — pretty patient room with dental chair
+    heroSlide2: "/images/team/Shiva_Color_DSC_2860.jpeg",        // 2. Dr. Talebi — personal connection
+    heroSlide3: "/images/office/Console-and-light-lobby.jpeg",   // 3. Lobby — mid-century reception
+    // Portrait in "Meet Dr. Talebi" section: different shot from heroSlide2, no on-page duplicate
+    drTalebiPortrait: "/images/team/DSC_3155.jpeg",
   },
   insurance: ["Cigna PPO", "Guardian PPO", "Humana PPO", "Delta Dental PPO"],
   affiliations: [

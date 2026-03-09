@@ -50,7 +50,7 @@ export default function ServicePageTemplate({
       </section>
 
       {/* Body — controlled reading width for long-form comfort */}
-      <section className="py-16 sm:py-20 md:py-28 bg-white">
+      <section className="py-10 md:py-14 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-base sm:text-lg text-[#7F7947] leading-relaxed space-y-5 font-body">

@@ -1,9 +1,11 @@
 import Layout from "@/components/layout/Layout";
 import PageBanner from "@/components/layout/PageBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function PrivacyPolicy() {
   return (
     <Layout>
+      <SEOHead title="Privacy Policy | Tooth Architect Dental Care" description="Privacy policy for Tooth Architect Dental Care website." canonical="https://www.tootharchitectdental.com/privacy-policy/" />
       <PageBanner title="Privacy Policy" />
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-3xl text-muted-foreground leading-relaxed font-body space-y-6">

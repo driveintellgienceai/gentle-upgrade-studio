@@ -13,10 +13,10 @@ export default function CTABanner() {
           Call us today
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-7 sm:mb-8">
-          <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="text-[#D47D45] hover:underline font-body font-semibold text-sm sm:text-base">
+          <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="text-white hover:text-[#F1DDBC] hover:underline font-body font-semibold text-sm sm:text-base transition-colors">
             New Patients: {siteConfig.phone.newPatients}
           </a>
-          <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="text-[#D47D45] hover:underline font-body font-semibold text-sm sm:text-base">
+          <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="text-white/80 hover:text-[#F1DDBC] hover:underline font-body font-semibold text-sm sm:text-base transition-colors">
             Existing Patients: {siteConfig.phone.existingPatients}
           </a>
         </div>

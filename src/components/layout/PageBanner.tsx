@@ -22,7 +22,7 @@ export default function PageBanner({ title, subtitle }: PageBannerProps) {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-secondary-foreground/60 max-w-2xl mx-auto font-body leading-relaxed px-2"
+            className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-[#5F5B35]/80 max-w-2xl mx-auto font-body leading-relaxed px-2"
           >
             {subtitle}
           </motion.p>

@@ -8,10 +8,14 @@ import GoogleReviewBadge from "@/components/GoogleReviewBadge";
 
 const servicesMega = [
   {
-    category: "General",
+    category: "General & Preventative",
     items: [
       { label: "General Dentistry", href: "/general-dentistry/" },
       { label: "Exam & Cleaning", href: "/exam-cleaning/" },
+      { label: "Digital X-Rays", href: "/digital-x-rays/" },
+      { label: "Oral Cancer Screening", href: "/oral-cancer-screening/" },
+      { label: "Gum Disease Treatment", href: "/gum-disease-periodontal-treatment/" },
+      { label: "Nightguards & Sportsguards", href: "/nightguards-sportsguards/" },
     ],
   },
   {
@@ -33,31 +37,12 @@ const servicesMega = [
     ],
   },
   {
-    category: "Preventative",
+    category: "Specialty",
     items: [
-      { label: "Gum Disease Treatment", href: "/gum-disease-periodontal-treatment/" },
-      { label: "Digital X-Rays", href: "/digital-x-rays/" },
-      { label: "Oral Cancer Screening", href: "/oral-cancer-screening/" },
-      { label: "Nightguards & Sportsguards", href: "/nightguards-sportsguards/" },
-    ],
-  },
-  {
-    category: "Pain Management",
-    items: [
-      { label: "TMJ", href: "/tmj/" },
+      { label: "TMJ Treatment", href: "/tmj/" },
       { label: "Botox", href: "/botox/" },
-    ],
-  },
-  {
-    category: "Holistic",
-    items: [
       { label: "Holistic Dentistry", href: "/holistic-dentistry/" },
-    ],
-  },
-  {
-    category: "Second Opinions",
-    items: [
-      { label: "Second Options", href: "/second-options/" },
+      { label: "Second Opinions", href: "/second-options/" },
     ],
   },
 ];
@@ -130,9 +115,9 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop Nav — active state uses location.pathname via useLocation() already imported above */}
           <nav className="hidden lg:flex items-center gap-0.5">
-            <Link to="/" className="px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">Home</Link>
+            <Link to="/" className={`px-3 py-2 text-sm font-body transition-colors ${location.pathname === "/" ? "text-[#D47D45] font-semibold" : "text-[#5F5B35] hover:text-[#D47D45]"}`}>Home</Link>
 
             {/* About Us */}
             <div className="relative group">
@@ -155,8 +140,8 @@ export default function Header() {
               <button className="flex items-center gap-1 px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">
                 Services <ChevronDown className="h-3.5 w-3.5" />
               </button>
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-white border border-[#B1C6B7]/25 rounded-xl shadow-lg p-6 min-w-[700px] grid grid-cols-3 gap-6">
+              <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="bg-white border border-[#B1C6B7]/25 rounded-xl shadow-lg p-6 w-[640px] grid grid-cols-4 gap-5">
                   {servicesMega.map((group) => (
                     <div key={group.category}>
                       <h4 className="text-xs font-body font-semibold text-[#D47D45] uppercase tracking-wider mb-2">{group.category}</h4>

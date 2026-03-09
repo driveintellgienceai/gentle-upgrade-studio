@@ -1,9 +1,11 @@
 import Layout from "@/components/layout/Layout";
 import PageBanner from "@/components/layout/PageBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function CookiePolicy() {
   return (
     <Layout>
+      <SEOHead title="Cookie Policy | Tooth Architect Dental Care" description="Cookie policy for Tooth Architect Dental Care website." canonical="https://www.tootharchitectdental.com/cookie-policy/" />
       <PageBanner title="Cookie Policy" />
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-3xl text-muted-foreground leading-relaxed font-body space-y-6">

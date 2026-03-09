@@ -4,28 +4,18 @@ import PageBanner from "@/components/layout/PageBanner";
 import CTABanner from "@/components/CTABanner";
 import SEOHead from "@/components/SEOHead";
 
-// Curated image list — ordered by visual impact and aesthetic fit.
-// HDR/Edit versions are used over raw DSC files for richer color.
-// objectPosition controls the crop focal point for each portrait or tall image.
-// span controls the masonry grid layout: col-span-2 creates horizontal emphasis.
+// Office Tour: ONLY verified architectural/interior photos — no people, no portraits.
+// Each image verified as a room photo from screenshots or confirmed source.
 const officePhotos = [
-  {
-    src: "/images/photoshoot/_DSC_4486-HDR-2-Edit-3.jpg",
-    alt: "Patient consultation area — sage cabinetry, warm light",
-    span: "col-span-2 row-span-2",
-    position: "center 40%",
-  },
-  { src: "/images/photoshoot/_DSC_4570-HDR-Edit.jpg", alt: "Waiting area with pendant lighting", position: "center 35%" },
-  { src: "/images/office/lobby blue painting.jpeg", alt: "Lobby with signature blue painting — mid-century art", position: "center center" },
-  { src: "/images/photoshoot/_DSC_4591-HDR-Edit.jpg", alt: "Architectural vanity detail", position: "center 30%" },
-  { src: "/images/office/Console and light lobby.jpeg", alt: "Reception console and ambient lighting", position: "center 45%", span: "col-span-2" },
-  { src: "/images/photoshoot/_DSC_4382-HDR-2-Edit.jpg", alt: "Treatment room — clean and calm", position: "center 40%" },
-  { src: "/images/photoshoot/_DSC_4415-HDR.jpg", alt: "Mid-century sconce lighting detail", position: "center center" },
-  { src: "/images/office/Lobby 2 books.jpeg", alt: "Lobby reading area — books and greenery", position: "center center" },
-  { src: "/images/photoshoot/DSC_4405-HDR-Edit.jpg", alt: "Treatment room overview", position: "center 40%", span: "col-span-2" },
-  { src: "/images/office/loby 1 book.jpeg", alt: "Lobby reading nook", position: "center center" },
-  { src: "/images/office/DSC_0060 edited levels.jpeg", alt: "Office atmosphere — warm color palette", position: "center 35%" },
-  { src: "/images/office/DSC_2143.jpeg", alt: "Treatment room — natural light", position: "center 45%" },
+  { src: "/images/office/Console-and-light-lobby.jpeg",       alt: "Reception area with console and ambient lighting",  span: "col-span-2 row-span-2", position: "center 45%" },
+  { src: "/images/office/lobby-blue-painting.jpeg",            alt: "Lobby featuring signature blue painting",             position: "center center" },
+  { src: "/images/office/Lobby-2-books.jpeg",                  alt: "Welcoming lobby seating area",                    position: "center center" },
+  { src: "/images/office/console-lobby.jpeg",                  alt: "Reception console detail",                        position: "center center" },
+  { src: "/images/office/DSC_2143.jpeg",                       alt: "Treatment room with natural light",               span: "col-span-2", position: "center 45%" },
+  { src: "/images/office/DSC_2147.jpeg",                       alt: "Modern office interior",                          position: "center center" },
+  { src: "/images/office/DSC_2004.jpeg",                       alt: "Dental operatory",                                position: "center center" },
+  { src: "/images/office/DSC_0060-edited-levels.jpeg",         alt: "Office atmosphere",                               position: "center 35%" },
+  { src: "/images/office/loby-1-book.jpeg",                    alt: "Lobby reading nook",                              position: "center center" },
 ];
 
 export default function OfficeTour() {
@@ -38,7 +28,7 @@ export default function OfficeTour() {
       />
       <PageBanner title="Office Tour" />
 
-      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center mb-14">
             <p className="text-base sm:text-lg text-[#7F7947] leading-relaxed font-body">
@@ -56,10 +46,10 @@ export default function OfficeTour() {
             {officePhotos.map((photo, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: Math.min(i * 0.06, 0.5) }}
+                initial={{ y: 10 }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true, amount: 0 }}
+                transition={{ delay: Math.min(i * 0.06, 0.4) }}
                 className={`overflow-hidden rounded-xl bg-[#F1DDBC]/20 ${photo.span || ""}`}
               >
                 <img

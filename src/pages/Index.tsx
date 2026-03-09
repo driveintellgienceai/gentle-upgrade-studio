@@ -9,25 +9,26 @@ import CredentialsBanner from "@/components/CredentialsBanner";
 import SEOHead from "@/components/SEOHead";
 import { siteConfig } from "@/config/siteConfig";
 
-// FIX #2/#3: Natural object-position per image; no tracking override on font
+// Hero carousel: 3 required types — patient room/dental chair, Dr. Talebi, office lobby.
+// objectPosition = CSS art direction controlling crop focal point on portrait images.
 const heroSlides = [
   {
     image: siteConfig.images.heroSlide1,
     heading: "CONSERVATIVE DENTISTRY",
     text: "with a preventative approach and minimalist treatment planning",
-    objectPosition: "center center",
+    objectPosition: "center 40%",   // Treatment room — dental chair in the pretty patient room
   },
   {
     image: siteConfig.images.heroSlide2,
     heading: "OUR MISSION IS",
     text: "to provide the highest quality dentistry and patient care available",
-    objectPosition: "center center",
+    objectPosition: "center 20%",   // Dr. Talebi portrait — crop to face
   },
   {
     image: siteConfig.images.heroSlide3,
     heading: "DENTAL EXPERTS",
     text: "committed to the dental health of you and your family",
-    objectPosition: "center 40%",
+    objectPosition: "center 40%",   // Lobby — show the mid-century console and lighting
   },
 ];
 
@@ -76,8 +77,7 @@ export default function Index() {
           >
             <img
               src={slide.image}
-              alt=""
-              aria-hidden="true"
+              alt={slide.heading}
               className="w-full h-full object-cover"
               style={{ objectPosition: slide.objectPosition }}
               loading={i === 0 ? "eager" : "lazy"}
@@ -142,53 +142,45 @@ export default function Index() {
       </section>
 
       {/* ─── WELCOME ───────────────────────────────────────────────────── */}
-      <section className="py-14 sm:py-20 md:py-28 lg:py-32 bg-white">
+      {/* No whileInView on heading — it's the first content section, must be visible on load */}
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h2
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-2xl sm:text-3xl md:text-4xl font-heading text-[#5F5B35] leading-tight"
-            >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading text-[#5F5B35] leading-tight">
               Welcome to Tooth Architect Dental Care
-            </motion.h2>
-            {/* FIX #17: Thin architectural divider — brand-precise */}
+            </h2>
             <div className="w-12 h-px bg-[#B1C6B7] mx-auto my-5 sm:my-6" />
-            {/* FIX #1: Olive text (#5F5B35) = 6.5:1 on white — passes WCAG AA */}
             <p className="text-base sm:text-lg text-[#5F5B35]/80 leading-relaxed font-body">
-              Welcome to Tooth Architect Dental Care, home to Atlanta's Dental Architect! Dr. Shiva Talebi knows you are one of a kind. You'll find no other dentist comparable to Dr. Talebi! Her work as an architect injects a fresh and modern perspective into dentistry. As she designed dental practices for private and military offices, Dr. Talebi had a brilliant epiphany: She would exploit her architectural and creative passion to directly care for others in this exacting, fulfilling field of dentistry. Now, she leads Tooth Architect Dental Care of Sandy Springs her way – with a commitment to conservative and holistic dentistry. A preventative approach employing minimalist treatment planning rules the day.
+              Welcome to Tooth Architect Dental Care, home to Atlanta's Dental Architect! Dr. Shiva Talebi knows you are one of a kind. You'll find no other dentist comparable to Dr. Talebi! Her work as an architect injects a fresh and modern perspective into dentistry. As she designed dental practices for private and military offices, Dr. Talebi had a brilliant epiphany: She would channel her architectural creativity and passion to directly care for others in this exacting, fulfilling field of dentistry. Now, she leads Tooth Architect Dental Care of Sandy Springs her way – with a commitment to conservative and holistic dentistry. A preventative approach employing minimalist treatment planning rules the day.
             </p>
           </div>
         </div>
       </section>
 
       {/* ─── SERVICES ──────────────────────────────────────────────────── */}
-      {/* Linen wash at 8% — brand-appropriate subtle warmth */}
-      <section className="py-14 sm:py-20 md:py-24 bg-[#F1DDBC]/8">
+      {/* bg-[#F9F6F1] = hardcoded warm off-white — always visible unlike opacity variants */}
+      <section className="py-12 md:py-16 bg-[#F9F6F1]">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading text-[#5F5B35]">Our Services</h2>
             <div className="w-12 h-px bg-[#B1C6B7] mx-auto mt-4" />
           </div>
 
-          {/* FIX #13: p-6 md:p-8 on cards; FIX #6: rounded-xl (12px) for architectural precision */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.07 }}
+                initial={{ y: 12 }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true, amount: 0 }}
+                transition={{ delay: i * 0.06, duration: 0.4 }}
               >
                 <Link to={service.href}>
-                  <div className="h-full bg-white rounded-xl border border-[#B1C6B7]/25 p-6 md:p-8 hover:shadow-md hover:-translate-y-0.5 hover:border-[#D47D45]/25 transition-all duration-300 group">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#B1C6B7]/20 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-[#B1C6B7]/35 transition-colors">
+                  <div className="h-full bg-white rounded-xl border border-[#B1C6B7]/50 p-6 md:p-8 hover:shadow-md hover:-translate-y-0.5 hover:border-[#D47D45]/40 transition-all duration-300 group">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#B1C6B7]/25 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-[#B1C6B7]/40 transition-colors">
                       <service.icon className="h-6 w-6 sm:h-7 sm:w-7 text-[#5F5B35]" />
                     </div>
                     <h3 className="text-lg sm:text-xl font-heading text-[#5F5B35] mb-2">{service.title}</h3>
-                    {/* FIX #1: Olive body text at 80% opacity — readable, on-brand */}
                     <p className="text-sm text-[#5F5B35]/70 font-body leading-relaxed">{service.desc}</p>
                   </div>
                 </Link>
@@ -210,12 +202,11 @@ export default function Index() {
       </section>
 
       {/* ─── MEET DR. TALEBI ───────────────────────────────────────────── */}
-      <section className="py-14 sm:py-20 md:py-28 lg:py-32 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
 
-            {/* FIX #12: aspect-[4/3] on mobile, aspect-[3/4] on md+ */}
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <motion.div initial={{ x: -16 }} whileInView={{ x: 0 }} viewport={{ once: true, amount: 0 }} transition={{ duration: 0.5 }}>
               <div className="relative">
                 <img
                   src={siteConfig.images.drTalebiPortrait}
@@ -228,7 +219,7 @@ export default function Index() {
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <motion.div initial={{ x: 16 }} whileInView={{ x: 0 }} viewport={{ once: true, amount: 0 }} transition={{ duration: 0.5 }}>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading text-[#5F5B35] mb-4">
                 Meet {siteConfig.doctorShort}
               </h2>
@@ -250,8 +241,7 @@ export default function Index() {
       </section>
 
       {/* ─── TECHNOLOGY ────────────────────────────────────────────────── */}
-      {/* Dark olive section — brand's richest color creates visual anchor */}
-      <section className="py-14 sm:py-20 md:py-24 bg-[#5F5B35]">
+      <section className="py-12 md:py-16 bg-[#5F5B35]">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading text-white">Advanced Technology</h2>
@@ -262,15 +252,14 @@ export default function Index() {
             {techFeatures.map((feat, i) => (
               <motion.div
                 key={feat.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                {/* FIX #6: rounded-xl instead of rounded-2xl */}
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-[#F1DDBC]/12 flex items-center justify-center mx-auto mb-4 sm:mb-5">
-                  <feat.icon className="h-7 w-7 sm:h-8 sm:h-8 text-[#F1DDBC]" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-[#F1DDBC]/20 flex items-center justify-center mx-auto mb-4 sm:mb-5">
+                  <feat.icon className="h-7 w-7 sm:h-8 sm:w-8 text-[#F1DDBC]" />
                 </div>
                 <h3 className="text-base sm:text-lg font-heading text-white mb-2">{feat.title}</h3>
                 <p className="text-sm text-white/70 font-body leading-relaxed">{feat.desc}</p>
@@ -286,8 +275,7 @@ export default function Index() {
       </div>
 
       {/* ─── CTA ───────────────────────────────────────────────────────── */}
-      {/* FIX #15: max-w on paragraph controlled for all screen widths */}
-      <section className="py-14 sm:py-20 md:py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading text-[#5F5B35] mb-4">
             Ready to Transform Your Smile?

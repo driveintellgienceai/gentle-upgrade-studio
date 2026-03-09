@@ -20,13 +20,13 @@ const staff = [
   {
     name: "SUSAN",
     role: "Hygienist",
-    photo: "/images/team/Susan welcome board.jpg",
+    photo: "/images/team/Susan-welcome-board.jpg",
     bio: "Susan brings a wealth of experience from her journey as a traveling hygienist working in various dental offices across the country.",
   },
   {
     name: "MERCEDES",
     role: "Dental Assistant",
-    photo: "/images/team/Mercedes welcome board.jpg",
+    photo: "/images/team/Mercedes-welcome-board.jpg",
     bio: "Meet Mercedes, a dental assistant with 7 years of experience. She is dedicated to making every patient feel comfortable and cared for.",
   },
 ];
@@ -41,7 +41,7 @@ export default function MeetOurStaff() {
       />
       <PageBanner title="Meet Our Staff" />
 
-      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <p className="text-center text-[#7F7947] font-body max-w-2xl mx-auto mb-16 text-base leading-relaxed">
             Our team is what makes every visit to Tooth Architect special. Each member brings expertise, warmth, and genuine care to every patient interaction.
@@ -51,9 +51,9 @@ export default function MeetOurStaff() {
             {staff.map((member, i) => (
               <motion.div
                 key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ y: 14 }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >

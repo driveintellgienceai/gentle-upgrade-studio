@@ -10,13 +10,13 @@ export default function MeetTheDoctor() {
   return (
     <Layout>
       <SEOHead
-        title="Meet Dr. Shiva Talebi | Tooth Architect Dental Care | Sandy Springs, GA"
+        title="Meet Our Doctors | Tooth Architect Dental Care | Sandy Springs, GA"
         description="Meet Dr. Shiva Talebi, a dentist with a unique background in architecture offering holistic dental care in Sandy Springs, GA."
         canonical="https://www.tootharchitectdental.com/meet-the-doctor/"
       />
       <PageBanner title="DR. SHIVA TALEBI, D.M.D." subtitle="General Dentist" />
 
-      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-5 gap-10 md:gap-14">
 
@@ -37,31 +37,19 @@ export default function MeetTheDoctor() {
             {/* Bio + credentials */}
             <div className="md:col-span-3 space-y-5 text-sm sm:text-base text-muted-foreground leading-relaxed font-body">
               <p>
-                Since opening Tooth Architect Dental Care in 2013, Dr. Shiva Talebi has been blending art, science and holistic philosophies for a unique, patient-centered dental experience. Her journey began with a B.S. in Architecture from the Georgia Institute of Technology, where she designed cutting-edge dental and medical offices.
+                Meet Dr. Shiva Talebi, a dentist with a unique background in architecture, offering patients a distinctive blend of talents. Dr. Talebi's journey began with a B.S. in Architecture from Georgia Tech, where she launched her career designing cutting-edge dental and medical offices. However, her true calling emerged when she discovered the profound satisfaction of hands-on dentistry and direct patient care. Her passion for improving lives through oral health led her to achieve a D.M.D. from the Dental College of Georgia.
               </p>
               <p>
-                Her true calling emerged when she discovered the profound satisfaction of hands-on dentistry and direct patient care. She earned her D.M.D. from the Dental College of Georgia at Augusta University, graduating with the highest honors as a Gamma Beta Phi Honors Society member, with recognition in Who's Who Among American Students.
+                Dr. Talebi's practice is deeply rooted in holistic dentistry, emphasizing the interconnectedness of oral health and overall well-being. She takes the time to engage with each patient, delving into their habits and lifestyle to understand their unique dental and systemic needs. Recognizing the barriers of dental anxiety and judgment, she places patient comfort at the forefront and offers compassionate, empathetic care throughout all procedures. Her unwavering focus is on creating a pain-free and comfortable experience for every patient.
               </p>
               <p>
-                Dr. Talebi's architectural background gives her an exceptional eye for detail and structure, which she applies to every aspect of dental care — from designing treatment plans to performing precise procedures. She approaches dentistry not just as a science, but as an art form.
+                Committed to excellence, Dr. Talebi provides state-of-the-art, bio-neutral, and minimally invasive solutions. Through continuous, rigorous education, she remains at the cutting edge of dental technology and the latest techniques. Beyond her practice, she generously volunteers her time and dental expertise at the Ben Massell Dental Clinic, where she serves the underprivileged in Atlanta.
               </p>
               <p>
-                Her practice is deeply rooted in holistic dentistry, focusing on the overall well-being of her patients rather than just their dental health. She believes in treating the whole person, taking into account how oral health impacts overall health and vice versa.
+                Outside of her professional life, Dr. Talebi is an avid explorer who maintains an active lifestyle, engaging in activities like acrylic/oil painting, cooking, and hiking. She has a passion for travel and has adventurously ventured through more than 20 countries, often as a solo backpacker.
               </p>
-
-              <h3 className="font-heading text-[#5F5B35] text-lg pt-2">Professional Affiliations</h3>
-              <ul className="list-none space-y-1.5">
-                {siteConfig.affiliations.map((affiliation) => (
-                  <li key={affiliation} className="flex items-start gap-2">
-                    <span className="text-[#D47D45] mt-1 shrink-0">–</span>
-                    <span>{affiliation}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <h3 className="font-heading text-[#5F5B35] text-lg pt-2">Community Involvement</h3>
               <p>
-                Beyond her practice, Dr. Talebi is passionate about giving back. She volunteers at the Ben Massell Dental Clinic, providing dental care to those in need. She is also an AmeriCorps alumna and serves through Jewish Family & Career Services (JFCS), reflecting her belief that everyone deserves access to quality dental care.
+                With a commitment to both patient well-being and a life rich in experiences, Dr. Shiva Talebi is not just a dentist but a compassionate guide on the journey to your best possible oral and overall health.
               </p>
 
               <div className="pt-4">
