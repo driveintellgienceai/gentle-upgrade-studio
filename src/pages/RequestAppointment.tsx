@@ -89,7 +89,7 @@ export default function RequestAppointment() {
                   </Select>
                   {errors.source && <p className="text-xs text-destructive mt-1">{errors.source.message as string}</p>}
                 </div>
-                <Button type="submit" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-bold w-full">Continue</Button>
+                <Button type="submit" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-bold w-full">Continue</Button>
               </form>
             )}
 
