@@ -194,7 +194,7 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <GoogleReviewBadge />
-            <Button asChild className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold">
+            <Button asChild className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold">
               <Link to="/request-an-appointment/">Request a Consultation</Link>
             </Button>
           </div>
