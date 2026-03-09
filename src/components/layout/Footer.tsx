@@ -9,18 +9,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo + description */}
           <div>
-            <img src={siteConfig.images.logo} alt={siteConfig.name} className="h-12 w-auto mb-4 brightness-200" />
+            <img 
+              src="https://www.tootharchitectdental.com/wp-content/uploads/2022/05/logo-new.svg" 
+              alt="Tooth Architect Dental Care" 
+              className="h-12 w-auto mb-4 brightness-0 invert" 
+            />
             <p className="text-sm text-primary-foreground/70 leading-relaxed font-body mb-4">
               {siteConfig.tagline}
             </p>
-            <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-brand-terracotta transition-colors">
+            <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-[#F1DDBC] transition-colors">
               <Instagram className="h-4 w-4" /> Instagram
             </a>
           </div>
 
           {/* Quick links */}
           <div>
-            <h3 className="text-brand-terracotta font-heading text-lg mb-4">Quick Links</h3>
+            <h3 className="text-[#F1DDBC] font-heading text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2.5">
               {[
                 { label: "Home", href: "/" },
@@ -29,7 +33,7 @@ export default function Footer() {
                 { label: "Cookie Policy", href: "/cookie-policy/" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-brand-terracotta transition-colors font-body">
+                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-[#F1DDBC] transition-colors font-body">
                     {link.label}
                   </Link>
                 </li>
@@ -39,23 +43,23 @@ export default function Footer() {
 
           {/* Contact info */}
           <div>
-            <h3 className="text-brand-terracotta font-heading text-lg mb-4">Contact & Hours</h3>
+            <h3 className="text-[#F1DDBC] font-heading text-lg mb-4">Contact & Hours</h3>
             <div className="space-y-4 text-sm text-primary-foreground/70 font-body">
               <div className="flex items-start gap-2">
-                <Phone className="h-4 w-4 text-brand-terracotta mt-0.5 shrink-0" />
+                <Phone className="h-4 w-4 text-[#F1DDBC] mt-0.5 shrink-0" />
                 <div>
-                  <p>New Patients: <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="hover:text-brand-terracotta">{siteConfig.phone.newPatients}</a></p>
-                  <p>Existing: <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="hover:text-brand-terracotta">{siteConfig.phone.existingPatients}</a></p>
+                  <p>New Patients: <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="hover:text-[#F1DDBC]">{siteConfig.phone.newPatients}</a></p>
+                  <p>Existing: <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="hover:text-[#F1DDBC]">{siteConfig.phone.existingPatients}</a></p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-brand-terracotta mt-0.5 shrink-0" />
-                <a href={siteConfig.address.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-brand-terracotta">
+                <MapPin className="h-4 w-4 text-[#F1DDBC] mt-0.5 shrink-0" />
+                <a href={siteConfig.address.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#F1DDBC]">
                   {siteConfig.address.full}
                 </a>
               </div>
               <div className="flex items-start gap-2">
-                <Clock className="h-4 w-4 text-brand-terracotta mt-0.5 shrink-0" />
+                <Clock className="h-4 w-4 text-[#F1DDBC] mt-0.5 shrink-0" />
                 <div>
                   {siteConfig.hours.schedule.map((h) => (
                     <p key={h.days}>{h.days}: {h.hours}</p>
@@ -71,8 +75,8 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-primary-foreground/40">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <Link to="/privacy-policy/" className="hover:text-brand-terracotta transition-colors">Privacy Policy</Link>
-            <Link to="/cookie-policy/" className="hover:text-brand-terracotta transition-colors">Cookie Policy</Link>
+            <Link to="/privacy-policy/" className="hover:text-[#F1DDBC] transition-colors">Privacy Policy</Link>
+            <Link to="/cookie-policy/" className="hover:text-[#F1DDBC] transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

@@ -89,7 +89,7 @@ export default function RequestAppointment() {
                   </Select>
                   {errors.source && <p className="text-xs text-destructive mt-1">{errors.source.message as string}</p>}
                 </div>
-                <Button type="submit" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-bold w-full">Continue</Button>
+                <Button type="submit" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-bold w-full">Continue</Button>
               </form>
             )}
 
@@ -112,7 +112,7 @@ export default function RequestAppointment() {
                 </div>
                 <div className="flex gap-3">
                   <Button type="button" variant="outline" onClick={() => setStep(1)} className="flex-1">Back</Button>
-                  <Button type="submit" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-bold flex-1">Continue</Button>
+                  <Button type="submit" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-bold flex-1">Continue</Button>
                 </div>
               </form>
             )}

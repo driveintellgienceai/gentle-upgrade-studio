@@ -58,13 +58,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Wonderist Brand Colors for direct utility usage
+        // Wonderist Brand Colors for direct utility usage (EXACT from Brand Guide PDF)
         brand: {
-          'olive-dark': '#2F351A',  // Primary Dark (hsl 80,30%,15%)
-          'olive':      '#4C5220',  // Olive (hsl 73,44%,22%)
-          'ivory':      '#F5F1E9',  // Ivory (hsl 48,33%,94%)
-          'sand':       '#D9D3C4',  // Sand (hsl 37,16%,81%)
-          'terracotta': '#C89A6A',  // Terracotta (hsl 30,42%,60%)
+          'olive':      '#5F5B35',  // Primary - headers, nav, footer (hsl 66,28%,29%)
+          'avocado':    '#7F7947',  // Primary variant (hsl 73,32%,39%)
+          'eucalyptus': '#B1C6B7',  // Secondary - soft accents (hsl 146,17%,74%)
+          'linen':      '#F1DDBC',  // Secondary - warm backgrounds (hsl 40,60%,84%)
+          'rust':       '#D47D45',  // Accent - CTAs ONLY (hsl 24,62%,55%)
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

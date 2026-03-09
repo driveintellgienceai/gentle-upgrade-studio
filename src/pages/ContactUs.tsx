@@ -79,7 +79,7 @@ export default function ContactUs() {
                   <Label>Message</Label>
                   <Textarea rows={5} placeholder="How can we help you?" className="mt-1" />
                 </div>
-                <Button type="submit" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold w-full">
+                <Button type="submit" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold w-full">
                   Submit
                 </Button>
               </form>

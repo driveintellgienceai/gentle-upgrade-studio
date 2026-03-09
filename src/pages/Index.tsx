@@ -60,7 +60,7 @@ export default function Index() {
             className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
           >
             <img src={slide.image} alt={slide.heading} className="w-full h-full object-cover" loading={i === 0 ? "eager" : "lazy"} />
-            <div className="absolute inset-0 bg-brand-olive-dark/50" />
+            <div className="absolute inset-0 bg-[#5F5B35]/50" />
           </div>
         ))}
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
@@ -78,7 +78,7 @@ export default function Index() {
             </p>
           </motion.div>
           <div className="mt-8">
-            <Button asChild size="lg" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold">
+            <Button asChild size="lg" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold">
               <Link to="/request-an-appointment/">Request a Consultation</Link>
             </Button>
           </div>
@@ -214,7 +214,7 @@ export default function Index() {
             Schedule a consultation with {siteConfig.doctorShort} today. New patients call{" "}
             <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="text-accent hover:underline font-semibold">{siteConfig.phone.newPatients}</a>.
           </p>
-          <Button asChild size="lg" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold">
+          <Button asChild size="lg" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold">
             <Link to="/request-an-appointment/">Request a Consultation</Link>
           </Button>
         </div>
