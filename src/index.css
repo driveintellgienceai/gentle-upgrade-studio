@@ -29,102 +29,109 @@
 }
 
 /* === WONDERIST BRAND COLOR SYSTEM ===
- * Source: Wonderist Agency Brand Style Guide
- * Color families:
- *   Olive (#5B6142)    — primary identity
- *   Sage  (#8FA89B)    — secondary
- *   Linen (#F5EDE0)    — page background (warm, never sterile)
- *   Parchment (#EDE4D3)— section/card backgrounds
- *   Rust  (#C1602D)    — CTA and accent
+ * Source: Wonderist Agency Brand Style Guide (TADC BSG.pdf) — extracted 2026-03-08
+ * ALL VALUES CONFIRMED FROM PDF — exact hex, RGB, CMYK, PMS:
+ *
+ * PRIMARY COLORS (use freely):
+ *   Olive      #5F5B35  RGB(95,91,53)    CMYK(0,4,44,63)   PMS 450 C
+ *   Avocado    #7F7947  RGB(127,121,71)  CMYK(0,5,44,50)   PMS 5825 C
+ *
+ * SECONDARY COLORS (use sparingly for contrast/accent):
+ *   Eucalyptus #B1C6B7  RGB(177,198,183) CMYK(11,0,8,22)   PMS 5585 C
+ *   Linen      #F1DDBC  RGB(241,221,188) CMYK(0,8,22,5)    PMS 7506 C
+ *
+ * ACCENT COLOR (CTAs, key details only):
+ *   Rust       #D47D45  RGB(212,125,69)  CMYK(0,41,67,17)  PMS 1575 C
  */
 
 @layer base {
   :root {
-    /* Page background — Linen (warm off-white) */
-    --background: 37 43% 96%;
-    /* Primary text — near-black with warm undertone */
-    --foreground: 40 8% 16%;
+    /* Page background — Linen #F1DDBC lightened (warm parchment) */
+    --background: 38 62% 97%;
+    /* Primary text — near-black with olive undertone */
+    --foreground: 57 8% 16%;
 
-    /* Cards — slightly warmer white */
-    --card: 40 33% 97%;
-    --card-foreground: 40 8% 16%;
+    /* Cards — warm white */
+    --card: 38 50% 98%;
+    --card-foreground: 57 8% 16%;
 
-    --popover: 40 33% 97%;
-    --popover-foreground: 40 8% 16%;
+    --popover: 38 50% 98%;
+    --popover-foreground: 57 8% 16%;
 
-    /* Primary — Olive green */
-    --primary: 72 20% 32%;
-    --primary-foreground: 40 33% 97%;
+    /* Primary — Olive #5F5B35 (hsl ~57,28%,29%) */
+    --primary: 57 28% 29%;
+    --primary-foreground: 38 62% 94%;
 
-    /* Secondary — Sage green */
-    --secondary: 148 14% 61%;
-    --secondary-foreground: 40 8% 16%;
+    /* Secondary — Eucalyptus #B1C6B7 (hsl ~134,16%,73%) */
+    --secondary: 134 16% 73%;
+    --secondary-foreground: 57 8% 16%;
 
-    /* Muted — Parchment */
-    --muted: 37 36% 88%;
-    --muted-foreground: 40 4% 42%;
+    /* Muted — Linen #F1DDBC (hsl ~38,62%,84%) */
+    --muted: 38 62% 84%;
+    --muted-foreground: 57 6% 42%;
 
-    /* Accent — Rust (CTA, highlights) */
-    --accent: 18 64% 47%;
-    --accent-foreground: 40 33% 97%;
+    /* Accent — Rust #D47D45 (hsl ~24,60%,55%) */
+    --accent: 24 60% 55%;
+    --accent-foreground: 38 62% 97%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Borders — warm neutral */
-    --border: 37 15% 82%;
-    --input: 37 15% 82%;
-    --ring: 72 20% 32%;
+    /* Borders — warm Linen-toned neutral */
+    --border: 38 25% 82%;
+    --input: 38 25% 82%;
+    --ring: 57 28% 29%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 72 20% 32%;
-    --sidebar-foreground: 40 33% 97%;
-    --sidebar-primary: 18 64% 47%;
-    --sidebar-primary-foreground: 40 33% 97%;
-    --sidebar-accent: 148 14% 61%;
-    --sidebar-accent-foreground: 40 8% 16%;
-    --sidebar-border: 72 15% 28%;
-    --sidebar-ring: 18 64% 47%;
+    /* Sidebar — Olive primary */
+    --sidebar-background: 57 28% 29%;
+    --sidebar-foreground: 38 62% 94%;
+    --sidebar-primary: 24 60% 55%;
+    --sidebar-primary-foreground: 38 62% 97%;
+    --sidebar-accent: 134 16% 73%;
+    --sidebar-accent-foreground: 57 8% 16%;
+    --sidebar-border: 57 20% 24%;
+    --sidebar-ring: 24 60% 55%;
   }
 
   .dark {
-    --background: 80 12% 10%;
-    --foreground: 37 36% 88%;
+    --background: 57 15% 10%;
+    --foreground: 38 40% 88%;
 
-    --card: 80 12% 14%;
-    --card-foreground: 37 36% 88%;
+    --card: 57 15% 14%;
+    --card-foreground: 38 40% 88%;
 
-    --popover: 80 12% 14%;
-    --popover-foreground: 37 36% 88%;
+    --popover: 57 15% 14%;
+    --popover-foreground: 38 40% 88%;
 
-    --primary: 72 20% 42%;
-    --primary-foreground: 80 12% 10%;
+    --primary: 57 28% 40%;
+    --primary-foreground: 57 15% 10%;
 
-    --secondary: 148 14% 50%;
-    --secondary-foreground: 37 36% 88%;
+    --secondary: 134 16% 55%;
+    --secondary-foreground: 38 40% 88%;
 
-    --muted: 80 10% 18%;
-    --muted-foreground: 37 15% 65%;
+    --muted: 57 12% 18%;
+    --muted-foreground: 38 15% 65%;
 
-    --accent: 18 64% 52%;
-    --accent-foreground: 80 12% 10%;
+    --accent: 24 60% 58%;
+    --accent-foreground: 57 15% 10%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 80 10% 20%;
-    --input: 80 10% 20%;
-    --ring: 72 20% 42%;
+    --border: 57 12% 22%;
+    --input: 57 12% 22%;
+    --ring: 57 28% 40%;
 
-    --sidebar-background: 80 12% 8%;
-    --sidebar-foreground: 37 36% 88%;
-    --sidebar-primary: 18 64% 52%;
-    --sidebar-primary-foreground: 80 12% 8%;
-    --sidebar-accent: 80 10% 18%;
-    --sidebar-accent-foreground: 37 36% 88%;
-    --sidebar-border: 80 10% 18%;
-    --sidebar-ring: 18 64% 52%;
+    --sidebar-background: 57 15% 8%;
+    --sidebar-foreground: 38 40% 88%;
+    --sidebar-primary: 24 60% 58%;
+    --sidebar-primary-foreground: 57 15% 8%;
+    --sidebar-accent: 57 12% 18%;
+    --sidebar-accent-foreground: 38 40% 88%;
+    --sidebar-border: 57 12% 18%;
+    --sidebar-ring: 24 60% 58%;
   }
 }
 

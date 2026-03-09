@@ -60,12 +60,11 @@ export default {
         },
         // Direct Wonderist brand color utilities — use as bg-brand-olive, text-brand-rust, etc.
         brand: {
-          olive:     '#5B6142',
-          forest:    '#3E4A3C',
-          sage:      '#8FA89B',
-          parchment: '#EDE4D3',
-          linen:     '#F5EDE0',
-          rust:      '#C1602D',
+          olive:      '#5F5B35',   // Primary — Olive    (RGB 95,91,53   / CMYK 0,4,44,63  / PMS 450 C)
+          avocado:    '#7F7947',   // Primary — Avocado  (RGB 127,121,71 / CMYK 0,5,44,50  / PMS 5825 C)
+          eucalyptus: '#B1C6B7',   // Secondary — Eucalyptus (RGB 177,198,183 / CMYK 11,0,8,22 / PMS 5585 C)
+          linen:      '#F1DDBC',   // Secondary — Linen  (RGB 241,221,188 / CMYK 0,8,22,5  / PMS 7506 C)
+          rust:       '#D47D45',   // Accent — Rust      (RGB 212,125,69 / CMYK 0,41,67,17 / PMS 1575 C)
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
