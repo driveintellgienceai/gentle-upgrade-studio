@@ -4,8 +4,8 @@
 
 /* === WONDERIST BRAND FONTS === */
 
-/* Google Fonts fallbacks — active until custom font files are dropped into public/fonts/ */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Nunito+Sans:wght@300;400;500;600;700&display=swap');
+/* Google Fonts fallbacks — Josefin Sans + Nunito Sans approximate Mostra Nuova + Museo Sans */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Nunito+Sans:wght@400;500;600;700&display=swap');
 
 /* Custom self-hosted fonts — drop .otf/.ttf files into public/fonts/ and these activate */
 @font-face {
@@ -46,92 +46,45 @@
 
 @layer base {
   :root {
-    /* Page background — Linen #F1DDBC lightened (warm parchment) */
-    --background: 38 62% 97%;
-    /* Primary text — near-black with olive undertone */
-    --foreground: 57 8% 16%;
+    /* Wonderist Brand Colors for Tooth Architect Dental Care - EXACT from Brand Guide PDF */
+    --background: 0 0% 100%;           /* Pure white page background */
+    --foreground: 66 28% 29%;          /* #5F5B35 Olive — primary text */
 
-    /* Cards — warm white */
-    --card: 38 50% 98%;
-    --card-foreground: 57 8% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 66 28% 29%;
 
-    --popover: 38 50% 98%;
-    --popover-foreground: 57 8% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 66 28% 29%;
 
-    /* Primary — Olive #5F5B35 (hsl ~57,28%,29%) */
-    --primary: 57 28% 29%;
-    --primary-foreground: 38 62% 94%;
+    --primary: 66 28% 29%;             /* #5F5B35 Olive — headers, nav, footer */
+    --primary-foreground: 0 0% 100%;   /* White text on olive */
 
-    /* Secondary — Eucalyptus #B1C6B7 (hsl ~134,16%,73%) */
-    --secondary: 134 16% 73%;
-    --secondary-foreground: 57 8% 16%;
+    --secondary: 146 17% 74%;          /* #B1C6B7 Eucalyptus — soft backgrounds */
+    --secondary-foreground: 66 28% 29%;
 
-    /* Muted — Linen #F1DDBC (hsl ~38,62%,84%) */
-    --muted: 38 62% 84%;
-    --muted-foreground: 57 6% 42%;
+    --muted: 40 60% 84%;               /* #F1DDBC Linen — warm muted backgrounds */
+    --muted-foreground: 66 28% 29%;
 
-    /* Accent — Rust #D47D45 (hsl ~24,60%,55%) */
-    --accent: 24 60% 55%;
-    --accent-foreground: 38 62% 97%;
+    --accent: 24 62% 55%;              /* #D47D45 Rust — CTAs and links ONLY */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Borders — warm Linen-toned neutral */
-    --border: 38 25% 82%;
-    --input: 38 25% 82%;
-    --ring: 57 28% 29%;
+    --border: 146 17% 74%;             /* #B1C6B7 Eucalyptus for subtle borders */
+    --input: 146 17% 74%;
+    --ring: 24 62% 55%;                /* #D47D45 Rust for focus rings */
 
     --radius: 0.5rem;
 
-    /* Sidebar — Olive primary */
-    --sidebar-background: 57 28% 29%;
-    --sidebar-foreground: 38 62% 94%;
-    --sidebar-primary: 24 60% 55%;
-    --sidebar-primary-foreground: 38 62% 97%;
-    --sidebar-accent: 134 16% 73%;
-    --sidebar-accent-foreground: 57 8% 16%;
-    --sidebar-border: 57 20% 24%;
-    --sidebar-ring: 24 60% 55%;
-  }
-
-  .dark {
-    --background: 57 15% 10%;
-    --foreground: 38 40% 88%;
-
-    --card: 57 15% 14%;
-    --card-foreground: 38 40% 88%;
-
-    --popover: 57 15% 14%;
-    --popover-foreground: 38 40% 88%;
-
-    --primary: 57 28% 40%;
-    --primary-foreground: 57 15% 10%;
-
-    --secondary: 134 16% 55%;
-    --secondary-foreground: 38 40% 88%;
-
-    --muted: 57 12% 18%;
-    --muted-foreground: 38 15% 65%;
-
-    --accent: 24 60% 58%;
-    --accent-foreground: 57 15% 10%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 57 12% 22%;
-    --input: 57 12% 22%;
-    --ring: 57 28% 40%;
-
-    --sidebar-background: 57 15% 8%;
-    --sidebar-foreground: 38 40% 88%;
-    --sidebar-primary: 24 60% 58%;
-    --sidebar-primary-foreground: 57 15% 8%;
-    --sidebar-accent: 57 12% 18%;
-    --sidebar-accent-foreground: 38 40% 88%;
-    --sidebar-border: 57 12% 18%;
-    --sidebar-ring: 24 60% 58%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 66 28% 29%;
+    --sidebar-primary: 66 28% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 146 17% 74%;
+    --sidebar-accent-foreground: 66 28% 29%;
+    --sidebar-border: 146 17% 74%;
+    --sidebar-ring: 24 62% 55%;
   }
 }
 
