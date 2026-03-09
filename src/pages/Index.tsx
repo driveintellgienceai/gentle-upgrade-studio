@@ -78,7 +78,7 @@ export default function Index() {
             </p>
           </motion.div>
           <div className="mt-8">
-            <Button asChild size="lg" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold">
+            <Button asChild size="lg" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold">
               <Link to="/request-an-appointment/">Request a Consultation</Link>
             </Button>
           </div>
