@@ -83,7 +83,7 @@ export default function GumSwellingTreatment() {
           {/* Author box */}
           <div className="mt-8 sm:mt-12 border-t border-border pt-6 sm:pt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
             <img
-              src="https://www.tootharchitectdental.com/wp-content/uploads/2023/11/Dr.-ShivaTalebi-745x1024.jpg"
+              src="/images/team/Shiva_Color_DSC_2860.jpeg"
               alt="Dr. Shiva Talebi"
               className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover shrink-0"
               loading="lazy"

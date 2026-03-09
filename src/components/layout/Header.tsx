@@ -35,6 +35,7 @@ const servicesMega = [
   {
     category: "Preventative",
     items: [
+      { label: "Gum Disease Treatment", href: "/gum-disease-periodontal-treatment/" },
       { label: "Digital X-Rays", href: "/digital-x-rays/" },
       { label: "Oral Cancer Screening", href: "/oral-cancer-screening/" },
       { label: "Nightguards & Sportsguards", href: "/nightguards-sportsguards/" },

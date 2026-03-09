@@ -37,6 +37,8 @@ export const siteConfig = {
   },
   images: {
     logo: "/logos/tadc-primary-full-color-rgb.svg",
+    logoWhite: "/logos/tadc-primary-white-rgb.svg",
+    logoIcon: "/logos/tadc-icon-full-color-rgb.svg",
     heroSlide1: "/images/office/Console and light lobby.jpeg",
     heroSlide2: "/images/team/Shiva_Color_DSC_2860.jpeg",
     heroSlide3: "/images/hero/Home page photo.JPG",

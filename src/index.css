@@ -4,8 +4,6 @@
 
 /* === WONDERIST BRAND FONTS === */
 
-/* Google Fonts fallbacks — Josefin Sans + Nunito Sans approximate Mostra Nuova + Museo Sans */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Nunito+Sans:wght@400;500;600;700&display=swap');
 
 /* Custom self-hosted fonts — drop .otf/.ttf files into public/fonts/ and these activate */
 @font-face {

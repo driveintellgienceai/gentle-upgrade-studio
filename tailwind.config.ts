@@ -20,8 +20,8 @@ export default {
     extend: {
       fontFamily: {
         // Wonderist brand fonts with Google Fonts fallbacks
-        heading: ['"Mostra Nuova"', '"Josefin Sans"', 'sans-serif'],
-        body:    ['"Museo Sans"', '"Nunito Sans"', 'sans-serif'],
+        heading: ['"Mostra Nuova"', 'serif'],
+        body:    ['"Museo Sans"', 'sans-serif'],
       },
       colors: {
         // shadcn/ui semantic tokens (mapped to brand)
