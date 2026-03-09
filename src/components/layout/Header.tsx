@@ -106,11 +106,11 @@ export default function Header() {
               />
             </Link>
             <div className="flex items-center gap-6">
-              <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="flex items-center gap-2 text-sm text-primary-foreground font-body">
+              <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="flex items-center gap-2 text-sm text-[#5F5B35] font-body">
                 <Phone className="h-3.5 w-3.5" />
                 New Patients: {siteConfig.phone.newPatients}
               </a>
-              <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="flex items-center gap-2 text-sm text-primary-foreground/80 font-body">
+              <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="flex items-center gap-2 text-sm text-[#5F5B35]/80 font-body">
                 <Phone className="h-3.5 w-3.5" />
                 Existing: {siteConfig.phone.existingPatients}
               </a>
