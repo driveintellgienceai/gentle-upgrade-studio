@@ -60,7 +60,7 @@ export default function Index() {
             className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
           >
             <img src={slide.image} alt={slide.heading} className="w-full h-full object-cover" loading={i === 0 ? "eager" : "lazy"} />
-            <div className="absolute inset-0 bg-brand-olive-dark/50" />
+            <div className="absolute inset-0 bg-[#5F5B35]/50" />
           </div>
         ))}
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
