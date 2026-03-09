@@ -122,7 +122,11 @@ export default function Header() {
         <div className="container mx-auto px-4 flex items-center justify-between h-14 lg:h-12">
           {/* Mobile logo */}
           <Link to="/" className="lg:hidden flex items-center shrink-0">
-            <img src={siteConfig.images.logo} alt={siteConfig.name} className="h-8 sm:h-10 w-auto" />
+            <img 
+              src="https://www.tootharchitectdental.com/wp-content/uploads/2022/05/logo-new.svg" 
+              alt="Tooth Architect Dental Care" 
+              className="h-10 w-auto" 
+            />
           </Link>
 
           {/* Desktop Nav */}
