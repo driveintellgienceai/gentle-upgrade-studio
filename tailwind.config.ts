@@ -19,8 +19,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        // Wonderist brand fonts with fallbacks
-        heading: ['"Mostra Nuova"', '"Cormorant Garamond"', 'serif'],
+        // Wonderist brand fonts with Google Fonts fallbacks
+        heading: ['"Mostra Nuova"', '"Josefin Sans"', 'sans-serif'],
         body:    ['"Museo Sans"', '"Nunito Sans"', 'sans-serif'],
       },
       colors: {
@@ -58,13 +58,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Direct Wonderist brand color utilities — use as bg-brand-olive, text-brand-rust, etc.
+        // Wonderist Brand Colors for direct utility usage
         brand: {
-          olive:      '#5F5B35',   // Primary — Olive    (RGB 95,91,53   / CMYK 0,4,44,63  / PMS 450 C)
-          avocado:    '#7F7947',   // Primary — Avocado  (RGB 127,121,71 / CMYK 0,5,44,50  / PMS 5825 C)
-          eucalyptus: '#B1C6B7',   // Secondary — Eucalyptus (RGB 177,198,183 / CMYK 11,0,8,22 / PMS 5585 C)
-          linen:      '#F1DDBC',   // Secondary — Linen  (RGB 241,221,188 / CMYK 0,8,22,5  / PMS 7506 C)
-          rust:       '#D47D45',   // Accent — Rust      (RGB 212,125,69 / CMYK 0,41,67,17 / PMS 1575 C)
+          'olive-dark': '#2F351A',  // Primary Dark (hsl 80,30%,15%)
+          'olive':      '#4C5220',  // Olive (hsl 73,44%,22%)
+          'ivory':      '#F5F1E9',  // Ivory (hsl 48,33%,94%)
+          'sand':       '#D9D3C4',  // Sand (hsl 37,16%,81%)
+          'terracotta': '#C89A6A',  // Terracotta (hsl 30,42%,60%)
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
