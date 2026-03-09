@@ -22,7 +22,7 @@ export default function MeetTheDoctor() {
                 Meet Dr. Shiva Talebi, a dentist with a unique background in architecture, offering patients a distinctive blend of talents. Dr. Talebi's journey began with a B.S. in Architecture from Georgia Tech, where she launched her career designing cutting-edge dental and medical offices. However, her true calling emerged when she discovered the profound satisfaction of hands-on dentistry and direct patient care. Her passion for improving lives through oral health led her to achieve a D.M.D. from the Dental College of Georgia. Dr. Talebi's practice is deeply rooted in holistic dentistry, emphasizing the interconnectedness of oral health and overall well-being. She generously volunteers her time and dental expertise at the Ben Massell Dental Clinic.
               </p>
               <div className="pt-4">
-                <Button asChild className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold">
+                <Button asChild className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold">
                   <Link to="/request-an-appointment/">Request a Consultation</Link>
                 </Button>
               </div>
