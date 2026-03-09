@@ -139,9 +139,9 @@ export default function Header() {
                 About Us <ChevronDown className="h-3.5 w-3.5" />
               </button>
               <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-card border border-border rounded-md shadow-xl py-2 min-w-[200px]">
+                <div className="bg-white border border-gray-200 rounded-md shadow-xl py-2 min-w-[200px]">
                   {aboutDropdown.map((item) => (
-                    <Link key={item.href} to={item.href} className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-primary hover:bg-muted transition-colors">
+                    <Link key={item.href} to={item.href} className="block px-4 py-2.5 text-sm text-[#5F5B35] hover:text-[#D47D45] hover:bg-[#F1DDBC]/20 transition-colors">
                       {item.label}
                     </Link>
                   ))}
@@ -151,16 +151,16 @@ export default function Header() {
 
             {/* Services mega-menu */}
             <div className="relative group">
-              <button className="flex items-center gap-1 px-3 py-2 text-sm font-body text-foreground/80 hover:text-primary transition-colors">
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">
                 Services <ChevronDown className="h-3.5 w-3.5" />
               </button>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-card border border-border rounded-xl shadow-xl p-6 min-w-[700px] grid grid-cols-3 gap-6">
+                <div className="bg-white border border-gray-200 rounded-xl shadow-xl p-6 min-w-[700px] grid grid-cols-3 gap-6">
                   {servicesMega.map((group) => (
                     <div key={group.category}>
-                      <h4 className="text-xs font-body font-semibold text-accent uppercase tracking-wider mb-2">{group.category}</h4>
+                      <h4 className="text-xs font-body font-semibold text-[#D47D45] uppercase tracking-wider mb-2">{group.category}</h4>
                       {group.items.map((item) => (
-                        <Link key={item.href} to={item.href} className="block py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Link key={item.href} to={item.href} className="block py-1.5 text-sm text-[#5F5B35] hover:text-[#D47D45] transition-colors">
                           {item.label}
                         </Link>
                       ))}
@@ -172,13 +172,13 @@ export default function Header() {
 
             {/* Patient Resources */}
             <div className="relative group">
-              <button className="flex items-center gap-1 px-3 py-2 text-sm font-body text-foreground/80 hover:text-primary transition-colors">
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">
                 Patient Resources <ChevronDown className="h-3.5 w-3.5" />
               </button>
               <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-card border border-border rounded-md shadow-xl py-2 min-w-[200px]">
+                <div className="bg-white border border-gray-200 rounded-md shadow-xl py-2 min-w-[200px]">
                   {resourcesDropdown.map((item) => (
-                    <Link key={item.href} to={item.href} className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-primary hover:bg-muted transition-colors">
+                    <Link key={item.href} to={item.href} className="block px-4 py-2.5 text-sm text-[#5F5B35] hover:text-[#D47D45] hover:bg-[#F1DDBC]/20 transition-colors">
                       {item.label}
                     </Link>
                   ))}
@@ -186,9 +186,9 @@ export default function Header() {
               </div>
             </div>
 
-            <Link to="/gallery/" className="px-3 py-2 text-sm font-body text-foreground/80 hover:text-primary transition-colors">Gallery</Link>
-            <Link to="/testimonials/" className="px-3 py-2 text-sm font-body text-foreground/80 hover:text-primary transition-colors">Testimonials</Link>
-            <Link to="/contact-us/" className="px-3 py-2 text-sm font-body text-foreground/80 hover:text-primary transition-colors">Contact</Link>
+            <Link to="/gallery/" className="px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">Gallery</Link>
+            <Link to="/testimonials/" className="px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">Testimonials</Link>
+            <Link to="/contact-us/" className="px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">Contact</Link>
           </nav>
 
           {/* Desktop CTA */}
