@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Logo + description */}
           <div>
             <img 
-              src="/logos/tadc-wordmark-white-rgb.svg" 
+              src="https://www.tootharchitectdental.com/wp-content/uploads/2022/05/logo-new.svg" 
               alt="Tooth Architect Dental Care" 
               className="h-12 w-auto mb-4 brightness-0 invert" 
             />
