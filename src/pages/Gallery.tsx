@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import PageBanner from "@/components/layout/PageBanner";
+import CTABanner from "@/components/CTABanner";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -29,51 +31,30 @@ export default function Gallery() {
 
   return (
     <Layout>
-      <PageBanner title="Gallery" subtitle="Real patients, real results" />
+      <SEOHead title="Smile Gallery | Tooth Architect Dental Care | Sandy Springs, GA" description="View before and after smile transformation photos from Tooth Architect Dental Care in Sandy Springs, GA." canonical="https://www.tootharchitectdental.com/gallery/" />
+      <PageBanner title="Gallery" subtitle="Before and after smile gallery" />
       <section className="py-10 sm:py-16 md:py-24">
         <div className="container mx-auto px-4">
-          {/* Filter tabs - horizontally scrollable on mobile */}
-          <div className="flex gap-2 mb-8 sm:mb-10 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap sm:justify-center scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="flex gap-2 mb-8 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap sm:justify-center -mx-4 px-4 sm:mx-0 sm:px-0">
             {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActive(cat)}
-                className={cn(
-                  "px-4 py-2.5 rounded-full text-sm font-body transition-colors whitespace-nowrap shrink-0",
-                  active === cat
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground hover:bg-primary/10"
-                )}
-              >
+              <button key={cat} onClick={() => setActive(cat)} className={cn("px-4 py-2.5 rounded-full text-sm font-body transition-colors whitespace-nowrap shrink-0", active === cat ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-primary/10")}>
                 {cat}
               </button>
             ))}
           </div>
-
-          {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filtered.map((item, i) => (
-              <motion.div
-                key={item.src}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.05 }}
-                className="group"
-              >
-                <div className="rounded-lg overflow-hidden border border-border">
-                  <img
-                    src={item.src}
-                    alt={item.label}
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
+              <motion.div key={item.src} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.05 }} className="group">
+                <div className="rounded-xl overflow-hidden border border-border">
+                  <img src={item.src} alt={item.label} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-2 text-center">{item.label}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-2 text-center font-body">{item.label}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+      <CTABanner />
       <div className="lg:hidden h-16" />
     </Layout>
   );
