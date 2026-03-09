@@ -13,14 +13,14 @@ export default function CTABanner() {
           Call us today
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8">
-          <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="text-brand-terracotta hover:underline font-body font-semibold">
+          <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="text-brand-rust hover:underline font-body font-semibold">
             New Patients: {siteConfig.phone.newPatients}
           </a>
-          <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="text-brand-terracotta hover:underline font-body font-semibold">
+          <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="text-brand-rust hover:underline font-body font-semibold">
             Existing Patients: {siteConfig.phone.existingPatients}
           </a>
         </div>
-        <Button asChild size="lg" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold">
+        <Button asChild size="lg" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold">
           <Link to="/request-an-appointment/">Request a Consultation</Link>
         </Button>
       </div>

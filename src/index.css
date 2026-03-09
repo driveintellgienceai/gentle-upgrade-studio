@@ -46,52 +46,45 @@
 
 @layer base {
   :root {
-    /* Wonderist Brand Colors for Tooth Architect Dental Care */
-    --background: 48 33% 94%;          /* #F5F1E9 Ivory — page background */
-    --foreground: 80 30% 15%;          /* #2F351A Primary Dark — text */
+    /* Wonderist Brand Colors for Tooth Architect Dental Care - EXACT from Brand Guide PDF */
+    --background: 0 0% 100%;           /* Pure white page background */
+    --foreground: 66 28% 29%;          /* #5F5B35 Olive — primary text */
 
     --card: 0 0% 100%;
-    --card-foreground: 80 30% 15%;
+    --card-foreground: 66 28% 29%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 80 30% 15%;
+    --popover-foreground: 66 28% 29%;
 
-    --primary: 80 30% 15%;             /* #2F351A Primary Dark — buttons, headers */
-    --primary-foreground: 48 33% 94%;  /* #F5F1E9 Ivory — text on primary */
+    --primary: 66 28% 29%;             /* #5F5B35 Olive — headers, nav, footer */
+    --primary-foreground: 0 0% 100%;   /* White text on olive */
 
-    --secondary: 48 33% 94%;           /* #F5F1E9 Ivory — section backgrounds */
-    --secondary-foreground: 80 30% 15%;
+    --secondary: 146 17% 74%;          /* #B1C6B7 Eucalyptus — soft backgrounds */
+    --secondary-foreground: 66 28% 29%;
 
-    --muted: 37 16% 81%;               /* #D9D3C4 Sand — muted backgrounds */
-    --muted-foreground: 80 20% 35%;
+    --muted: 40 60% 84%;               /* #F1DDBC Linen — warm muted backgrounds */
+    --muted-foreground: 66 28% 29%;
 
-    --accent: 30 42% 60%;              /* #C89A6A Terracotta — accent, highlights */
-    --accent-foreground: 80 30% 15%;
+    --accent: 24 62% 55%;              /* #D47D45 Rust — CTAs and links ONLY */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 37 16% 81%;              /* #D9D3C4 Sand */
-    --input: 37 16% 81%;
-    --ring: 30 42% 60%;                /* #C89A6A Terracotta */
+    --border: 146 17% 74%;             /* #B1C6B7 Eucalyptus for subtle borders */
+    --input: 146 17% 74%;
+    --ring: 24 62% 55%;                /* #D47D45 Rust for focus rings */
 
     --radius: 0.5rem;
 
-    /* Named brand colors */
-    --olive-dark: 80 30% 15%;          /* #2F351A */
-    --olive: 73 44% 22%;               /* #4C5220 */
-    --ivory: 48 33% 94%;               /* #F5F1E9 */
-    --sand: 37 16% 81%;                /* #D9D3C4 */
-    --terracotta: 30 42% 60%;          /* #C89A6A */
-
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 80 30% 15%;
-    --sidebar-primary: 80 30% 15%;
-    --sidebar-primary-foreground: 48 33% 94%;
-    --sidebar-accent: 37 16% 81%;
-    --sidebar-accent-foreground: 80 30% 15%;
-    --sidebar-border: 37 16% 81%;
-    --sidebar-ring: 30 42% 60%;
+    --sidebar-foreground: 66 28% 29%;
+    --sidebar-primary: 66 28% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 146 17% 74%;
+    --sidebar-accent-foreground: 66 28% 29%;
+    --sidebar-border: 146 17% 74%;
+    --sidebar-ring: 24 62% 55%;
   }
 }
 

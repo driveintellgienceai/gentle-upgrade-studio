@@ -212,60 +212,60 @@ export default function Header() {
 
       {/* Mobile menu overlay */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-14 z-[60] overflow-y-auto pb-24 bg-card">
+        <div className="lg:hidden fixed inset-0 top-14 z-[60] overflow-y-auto pb-24 bg-white">
           <nav className="px-6 py-4 flex flex-col">
-            <Link to="/" className="py-4 text-lg font-body text-foreground border-b border-border">Home</Link>
+            <Link to="/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-gray-200">Home</Link>
 
             {/* About Us */}
-            <button className="w-full text-left py-4 text-lg font-body text-foreground flex items-center justify-between border-b border-border" onClick={() => toggleSection("about")}>
+            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-gray-200" onClick={() => toggleSection("about")}>
               About Us <ChevronDown className={cn("h-5 w-5 transition-transform", openSection === "about" && "rotate-180")} />
             </button>
             {openSection === "about" && (
-              <div className="pl-4 bg-muted/30">
+              <div className="pl-4 bg-[#F1DDBC]/10">
                 {aboutDropdown.map((item) => (
-                  <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-foreground/70 border-b border-border/50">{item.label}</Link>
+                  <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-gray-100">{item.label}</Link>
                 ))}
               </div>
             )}
 
             {/* Services */}
-            <button className="w-full text-left py-4 text-lg font-body text-foreground flex items-center justify-between border-b border-border" onClick={() => toggleSection("services")}>
+            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-gray-200" onClick={() => toggleSection("services")}>
               Services <ChevronDown className={cn("h-5 w-5 transition-transform", openSection === "services" && "rotate-180")} />
             </button>
             {openSection === "services" && (
-              <div className="pl-4 bg-muted/30">
+              <div className="pl-4 bg-[#F1DDBC]/10">
                 {servicesMega.map((group) =>
                   group.items.map((item) => (
-                    <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-foreground/70 border-b border-border/50">{item.label}</Link>
+                    <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-gray-100">{item.label}</Link>
                   ))
                 )}
               </div>
             )}
 
             {/* Patient Resources */}
-            <button className="w-full text-left py-4 text-lg font-body text-foreground flex items-center justify-between border-b border-border" onClick={() => toggleSection("resources")}>
+            <button className="w-full text-left py-4 text-lg font-body text-[#5F5B35] flex items-center justify-between border-b border-gray-200" onClick={() => toggleSection("resources")}>
               Patient Resources <ChevronDown className={cn("h-5 w-5 transition-transform", openSection === "resources" && "rotate-180")} />
             </button>
             {openSection === "resources" && (
-              <div className="pl-4 bg-muted/30">
+              <div className="pl-4 bg-[#F1DDBC]/10">
                 {resourcesDropdown.map((item) => (
-                  <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-foreground/70 border-b border-border/50">{item.label}</Link>
+                  <Link key={item.href} to={item.href} className="block py-3 px-2 text-base font-body text-[#5F5B35] border-b border-gray-100">{item.label}</Link>
                 ))}
               </div>
             )}
 
-            <Link to="/gallery/" className="py-4 text-lg font-body text-foreground border-b border-border">Gallery</Link>
-            <Link to="/testimonials/" className="py-4 text-lg font-body text-foreground border-b border-border">Testimonials</Link>
-            <Link to="/contact-us/" className="py-4 text-lg font-body text-foreground border-b border-border">Contact</Link>
+            <Link to="/gallery/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-gray-200">Gallery</Link>
+            <Link to="/testimonials/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-gray-200">Testimonials</Link>
+            <Link to="/contact-us/" className="py-4 text-lg font-body text-[#5F5B35] border-b border-gray-200">Contact</Link>
 
             <div className="pt-6 flex flex-col gap-3">
-              <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="flex items-center gap-3 text-base text-accent font-body">
+              <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="flex items-center gap-3 text-base text-[#D47D45] font-body">
                 <Phone className="h-5 w-5" /> New Patients: {siteConfig.phone.newPatients}
               </a>
-              <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="flex items-center gap-3 text-base text-accent font-body">
+              <a href={`tel:${siteConfig.phone.existingPatientsTel}`} className="flex items-center gap-3 text-base text-[#D47D45] font-body">
                 <Phone className="h-5 w-5" /> Existing: {siteConfig.phone.existingPatients}
               </a>
-              <Button asChild size="lg" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold w-full mt-2">
+              <Button asChild size="lg" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold w-full mt-2">
                 <Link to="/request-an-appointment/">Request a Consultation</Link>
               </Button>
             </div>

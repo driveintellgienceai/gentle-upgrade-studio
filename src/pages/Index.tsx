@@ -214,7 +214,7 @@ export default function Index() {
             Schedule a consultation with {siteConfig.doctorShort} today. New patients call{" "}
             <a href={`tel:${siteConfig.phone.newPatientsTel}`} className="text-accent hover:underline font-semibold">{siteConfig.phone.newPatients}</a>.
           </p>
-          <Button asChild size="lg" className="bg-brand-terracotta text-white hover:bg-brand-terracotta/90 font-body font-bold">
+          <Button asChild size="lg" className="bg-brand-rust text-white hover:bg-brand-rust/90 font-body font-bold">
             <Link to="/request-an-appointment/">Request a Consultation</Link>
           </Button>
         </div>

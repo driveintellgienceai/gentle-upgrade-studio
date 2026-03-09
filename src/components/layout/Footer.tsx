@@ -75,8 +75,8 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-primary-foreground/40">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <Link to="/privacy-policy/" className="hover:text-brand-terracotta transition-colors">Privacy Policy</Link>
-            <Link to="/cookie-policy/" className="hover:text-brand-terracotta transition-colors">Cookie Policy</Link>
+            <Link to="/privacy-policy/" className="hover:text-[#F1DDBC] transition-colors">Privacy Policy</Link>
+            <Link to="/cookie-policy/" className="hover:text-[#F1DDBC] transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>
