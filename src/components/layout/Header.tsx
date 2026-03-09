@@ -131,11 +131,11 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-0.5">
-            <Link to="/" className="px-3 py-2 text-sm font-body text-foreground/80 hover:text-primary transition-colors">Home</Link>
+            <Link to="/" className="px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">Home</Link>
 
             {/* About Us */}
             <div className="relative group">
-              <button className="flex items-center gap-1 px-3 py-2 text-sm font-body text-foreground/80 hover:text-primary transition-colors">
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-body text-[#5F5B35] hover:text-[#D47D45] transition-colors">
                 About Us <ChevronDown className="h-3.5 w-3.5" />
               </button>
               <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
