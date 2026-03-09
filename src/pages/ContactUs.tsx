@@ -57,7 +57,7 @@ export default function ContactUs() {
                     <div>
                       <p className="font-semibold text-foreground text-sm sm:text-base">Address</p>
                       <a href="https://maps.app.goo.gl/EtukWtX8fpsymwJN9" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-sm sm:text-base">
-                        227 Sandy Springs Pl NE, Suite 390<br />Sandy Springs, GA 30328
+                        6667 Vernon Woods Dr NE, Ste B 30<br />Sandy Springs, GA 30328
                       </a>
                     </div>
                   </div>

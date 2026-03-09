@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
           </p>
           <h2 className="text-xl font-heading text-foreground">Contact Us</h2>
           <p>
-            If you have questions about this Privacy Policy, please contact us at <a href="tel:+14046668066" className="text-primary hover:underline">(404) 666-8066</a> or visit our office at 227 Sandy Springs Pl NE, Suite 390, Sandy Springs, GA 30328.
+            If you have questions about this Privacy Policy, please contact us at <a href="tel:+14046668066" className="text-primary hover:underline">(404) 666-8066</a> or visit our office at 6667 Vernon Woods Dr NE, Ste B 30, Sandy Springs, GA 30328.
           </p>
         </div>
       </section>
